@@ -1,4 +1,4 @@
-# jakeismeh.github.io
+# [jakeismeh.github.io](jakeismeh.github.io)
 This is my website.
 
 Based on the amazing [enough.css](https://jeffkreeftmeijer.github.io/enough.css/) by [Jeff Kreeftmeijer](https://github.com/jeffkreeftmeijer)
