@@ -9,4 +9,4 @@ Custom CSS includes:
 * night mode theme
 * better hyperlink styling
 
-Look behind the scenes @ github.com/JakeIsMeh/website/
+Look behind the scenes @ https://github.com/JakeIsMeh/website/
