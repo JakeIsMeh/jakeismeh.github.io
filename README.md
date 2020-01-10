@@ -8,3 +8,5 @@ enough.css is unmodified here, all custom styling is in add.css (minified versio
 Custom CSS includes: 
 * night mode theme
 * better hyperlink styling
+
+Behind the Scenes @ https://github.com/JakeIsMeh/website/
