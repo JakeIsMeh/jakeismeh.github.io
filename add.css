@@ -10,13 +10,13 @@ a:link {
     color: dodgerblue;
   }
   
-  a:visited {
+a:visited {
     text-decoration: none;
     color: dodgerblue;
   }
   
-  a:hover {
-    text-decoration: bold;
+a:hover {
+    text-decoration: none;
     color: hotpink;
   }
   
