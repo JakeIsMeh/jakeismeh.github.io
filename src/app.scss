@@ -1,0 +1,79 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+
+
+
+// Atkinson Hyperlegible, Manrope Bold, JetBrains Mobo
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#svelte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+body {
+    font: $base-font-size $base-font-family;
+    font-variant-ligatures: normal;
+    margin: auto;
+    max-width: 50rem;
+    background-color: $background-color;
+    color: $text-color;
+    min-height: 100vh;
+}
+
+a, a:visited {
+    transition: .16s;
+    color: deeppink;
+}
+a:hover, a:focus {
+    background-color: deeppink;
+    color: $background-color;
+}
+
+@include media-query($on-laptop + (calc($spacing-unit / 2))) {
+    body {
+        padding: 0 calc($spacing-unit / 2);
+    }
+}
+
+blockquote {
+    padding-left: $spacing-unit;
+    margin: calc($spacing-unit/2) 0;
+    line-height: 2;
+    font-size: relative-font-size(0.875);
+    border-left: $radius solid lightgrey;
+    border-radius: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font-family;
+}
+
+ul, ol {
+    padding-left: 1.25em;
+    list-style-type: '-  ';
+}
+
+code, kbd, pre {
+    font-family: $mono-font-family;
+}
+
+pre {
+    background-color: lightgrey;
+    font-size: relative-font-size(0.875);
+    overflow: auto;
+    padding: calc($spacing-unit / 2);
+    margin: calc($spacing-unit / 2) 0;
+    border-radius: $radius;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}

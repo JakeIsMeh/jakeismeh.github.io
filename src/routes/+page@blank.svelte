@@ -1,0 +1,52 @@
+<script>
+    import '../app.scss';
+    import IconGitlab from 'virtual:icons/feather/gitlab';
+    import IconGitlhub from 'virtual:icons/feather/github';
+    import IconExtLink from 'virtual:icons/feather/external-link';
+</script>
+
+<div class="main">
+    <img
+        src="https://avatars.githubusercontent.com/JakeIsMeh"
+        alt="profile pic"
+        class="pfp"
+    />
+    <div class="spacer" />
+    <h1>JakeIsMeh</h1>
+    <div class="spacer" />
+    <p><a href="/about" class="nav-link">about</a></p>
+    <p><a href="/projects" class="nav-link">projects</a></p>
+    <div class="spacer" />
+    <p><a href="https://gitlab.com/JakeIsMeh" class="nav-link"><IconGitlab/>gitlab<IconExtLink/></a></p>
+    <p><a href="https://github.com/JakeIsMeh" class="nav-link"><IconGitlhub/>github<IconExtLink/></a></p>
+</div>
+
+<style lang="scss">
+    .main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25em;
+        padding: $half-spacing-unit 0;
+    }
+    .spacer { height: 1.75rem; }
+    a.nav-link {
+        font-size: 1.5em;
+        color: $text-color;
+        line-height: $base-line-height;
+        transition: .16s;
+    }
+    a.nav-link:hover, a.nav-link:focus {
+        color: $background-color;
+        background-color: $text-color;
+    }
+    img.pfp {
+        width: auto;
+        max-height: 16rem;
+        border: calc($radius / 4) solid $text-color;
+        border-radius: $radius;
+        background-color: deeppink;
+    }
+</style>
