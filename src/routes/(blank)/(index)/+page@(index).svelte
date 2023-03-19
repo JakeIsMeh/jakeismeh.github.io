@@ -1,5 +1,5 @@
 <script>
-    import '../app.scss';
+    import '~/app.scss';
     import IconGitlab from 'virtual:icons/feather/gitlab';
     import IconGitlhub from 'virtual:icons/feather/github';
     import IconExtLink from 'virtual:icons/feather/external-link';

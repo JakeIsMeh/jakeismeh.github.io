@@ -1,8 +1,14 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import Icons from 'unplugin-icons/vite';
+import path from 'path';
 
 /** @type {import('vite').UserConfig} */
 export default {
+    resolve: {
+        alias: {
+            '~': path.resolve(__dirname, './src')
+        },
+    },
     plugins: [
         sveltekit(),
         Icons({
