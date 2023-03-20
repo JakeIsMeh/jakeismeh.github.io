@@ -22,20 +22,20 @@ body {
     font-variant-ligatures: normal;
     margin: auto;
     max-width: 50rem;
-    background-color: $background-color;
-    color: $text-color;
+    background-color: var(--t-bg);
+    color: var(--t-text);
     min-height: 100vh;
 }
 
 a, a:visited {
     transition: .16s;
-    color: deeppink;
+    color: var(--t-pink-text);
     padding: .125em .25em;
     margin: -.125em -.25em;
 }
 a:hover, a:focus {
-    background-color: deeppink;
-    color: $background-color;
+    background-color: var(--t-pink-bg);
+    color: var(--t-text);
 }
 
 @include media-query($on-laptop + (calc($spacing-unit / 2))) {

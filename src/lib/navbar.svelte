@@ -32,17 +32,17 @@
         &,
         &:visited {
             transition: 0.16s;
-            color: $text-color;
+            color: var(--t-text);
         }
         &:hover,
         &:focus {
             background-color: unset;
-            color: $text-color;
+            color: var(--t-text);
         }
     }
     .header {
         margin-bottom: $quarter-spacing-unit;
-        border-bottom: 1px solid $text-color;
+        border-bottom: 1px solid var(--t-text);
     }
 
     h1 {
@@ -64,7 +64,7 @@
 
         .nav-link {
             font-size: 1.25em;
-            color: $text-color;
+            color: var(--t-text);
             font-weight: bold;
             transition: .16s;
             padding: 0 .25em;
@@ -77,8 +77,8 @@
 
             &:hover,
             &:focus {
-                color: $background-color;
-                background-color: $text-color;
+                color: var(--t-bg);
+                background-color: var(--t-text);
             }
         }
 
@@ -86,10 +86,11 @@
             position: absolute;
             top: $half-spacing-unit;
             right: $half-spacing-unit;
-            background-color: $background-color;
-            border: 1px solid $text-color;
+            background-color: var(--t-bg);
+            border: 1px solid var(--t-text);
             border-radius: $radius;
             text-align: right;
+            margin-right: 0; // negate right margin in menu
 
             label[for='nav-trigger'] {
                 display: block;
@@ -110,7 +111,7 @@
 
                 > svg {
                     margin-top: 10px;
-                    fill: $text-color;
+                    fill: var(--t-text);
                 }
             }
 

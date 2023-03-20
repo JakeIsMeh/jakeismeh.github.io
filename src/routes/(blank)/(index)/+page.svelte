@@ -36,32 +36,32 @@
         &,
         &:visited {
             transition: 0.16s;
-            color: $text-color;
+            color: var(--t-text);
         }
         &:hover,
         &:focus {
             background-color: unset;
-            color: $text-color;
+            color: var(--t-text);
         }
     }
     .spacer { height: 1.75rem; }
     a.nav-link {
         font-size: 1.5em;
-        color: $text-color;
+        color: var(--t-text);
         line-height: $base-line-height;
         transition: .16s;
         padding: 0 .25em;
         margin: 0; // reset margin.scss
     }
     a.nav-link:hover, a.nav-link:focus {
-        color: $background-color;
-        background-color: $text-color;
+        color: var(--t-bg);
+        background-color: var(--t-text);
     }
     img.pfp {
         width: auto;
         max-height: 16rem;
-        border: calc($radius / 4) solid $text-color;
+        border: calc($radius / 4) solid var(--t-text);
         border-radius: $radius;
-        background-color: deeppink;
+        background-color: var(--t-pink);
     }
 </style>

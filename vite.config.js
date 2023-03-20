@@ -27,6 +27,7 @@ export default {
         })
     ],
     css: {
+        devSourcemap: true,
         preprocessorOptions: {
             scss: {
                 additionalData: '@use "src/variables.scss" as *;'
