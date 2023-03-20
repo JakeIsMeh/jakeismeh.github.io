@@ -1,86 +1,86 @@
 // from ardov's color playground
 // .inspiration {
 //     // Light Colors
-//     --c-acc-base: hsl(223.81, 0%, 100%);
-//     --c-acc-app-bg: hsl(349.35, 99.29%, 98.05%);
-//     --c-acc-surface-normal: hsl(349.19, 99.61%, 96.87%);
-//     --c-acc-surface-hover: hsl(348.7, 99.89%, 93.69%);
-//     --c-acc-surface-active: hsl(348.15, 99.83%, 90.43%);
-//     --c-acc-divider: hsl(348.7, 99.89%, 93.69%);
-//     --c-acc-text-secondary: hsl(332.4, 99.84%, 36.9%);
-//     --c-acc-text-primary: hsl(0, 0%, 0%);
-//     --c-acc-btn-normal: hsl(331.86, 99.82%, 48.59%);
-//     --c-acc-btn-hover: hsl(332, 99.77%, 45.08%);
-//     --c-acc-btn-active: hsl(332.15, 99.81%, 41.6%);
-//     --c-acc-btn-text: hsl(223.81, 0%, 100%);
-//     --c-acc-shadow: hsl(338.78, 99.98%, 9.58%);
-//     --c-main-base: hsl(223.81, 0%, 100%);
-//     --c-main-app-bg: hsl(349.35, 99.29%, 98.05%);
-//     --c-main-surface-normal: hsl(349.19, 99.61%, 96.87%);
-//     --c-main-surface-hover: hsl(349.11, 47.16%, 92.56%);
-//     --c-main-surface-active: hsl(349.09, 29.22%, 88.11%);
-//     --c-main-divider: hsl(349.11, 47.16%, 92.56%);
-//     --c-main-text-secondary: hsl(348.76, 6.66%, 45.74%);
-//     --c-main-text-primary: hsl(347.53, 20.06%, 11.88%);
-//     --c-main-btn-normal: hsl(348.84, 6.51%, 51.98%);
-//     --c-main-btn-hover: hsl(348.79, 6.42%, 47.94%);
-//     --c-main-btn-active: hsl(348.74, 6.88%, 43.95%);
-//     --c-main-btn-text: hsl(223.81, 0%, 100%);
-//     --c-main-shadow: hsl(347.26, 24.13%, 9.55%);
+    // --c-acc-base: hsl(223.81, 0%, 100%);
+    // --c-acc-app-bg: hsl(344.83, 99.86%, 98.03%);
+    // --c-acc-surface-normal: hsl(344.64, 99.8%, 96.84%);
+    // --c-acc-surface-hover: hsl(344.09, 99.9%, 93.62%);
+    // --c-acc-surface-active: hsl(343.47, 99.9%, 90.33%);
+    // --c-acc-divider: hsl(344.09, 99.9%, 93.62%);
+    // --c-acc-text-secondary: hsl(328.57, 99.8%, 36.79%);
+    // --c-acc-text-primary: hsl(0, 0%, 0%);
+    // --c-acc-btn-normal: hsl(328.12, 99.82%, 47.52%);
+    // --c-acc-btn-hover: hsl(328.23, 99.86%, 44.04%);
+    // --c-acc-btn-active: hsl(328.36, 99.98%, 40.58%);
+    // --c-acc-btn-text: hsl(223.81, 0%, 100%);
+    // --c-acc-shadow: hsl(334.27, 99.92%, 9.47%);
+    // --c-main-base: hsl(223.81, 0%, 100%);
+    // --c-main-app-bg: hsl(344.83, 99.86%, 98.03%);
+    // --c-main-surface-normal: hsl(344.64, 99.8%, 96.84%);
+    // --c-main-surface-hover: hsl(344.43, 59.61%, 92.82%);
+    // --c-main-surface-active: hsl(344.41, 36.42%, 88.37%);
+    // --c-main-divider: hsl(344.43, 59.61%, 92.82%);
+    // --c-main-text-secondary: hsl(343.96, 8.09%, 45.9%);
+    // --c-main-text-primary: hsl(342.25, 24.75%, 11.67%);
+    // --c-main-btn-normal: hsl(344.05, 7.83%, 51.49%);
+    // --c-main-btn-hover: hsl(343.98, 7.88%, 47.45%);
+    // --c-main-btn-active: hsl(343.91, 8.45%, 43.46%);
+    // --c-main-btn-text: hsl(223.81, 0%, 100%);
+    // --c-main-shadow: hsl(341.93, 29.12%, 9.64%);
 
 //     // Dark colors
-//     --c-acc-base: hsl(338.86, 98.84%, 9.59%);
-//     --c-acc-app-bg: hsl(345.66, 99.97%, 4.86%);
-//     --c-acc-surface-normal: hsl(339.56, 73.19%, 13.74%);
-//     --c-acc-surface-hover: hsl(341.67, 55.94%, 18.1%);
-//     --c-acc-surface-active: hsl(342.92, 46.44%, 22.22%);
-//     --c-acc-divider: hsl(341.67, 55.94%, 18.1%);
-//     --c-acc-text-secondary: hsl(345.79, 99.93%, 80.03%);
-//     --c-acc-text-primary: hsl(348.81, 99.98%, 94.36%);
-//     --c-acc-btn-normal: hsl(332.02, 99.88%, 44.34%);
-//     --c-acc-btn-hover: hsl(331.87, 99.92%, 47.84%);
-//     --c-acc-btn-active: hsl(336.53, 100%, 58.12%);
-//     --c-acc-btn-text: hsl(349.58, 98.59%, 99.78%);
-//     --c-acc-shadow: hsl(338.78, 99.98%, 9.58%);
-//     --c-main-base: hsl(347.26, 24.13%, 9.55%);
-//     --c-main-app-bg: hsl(348.35, 46.87%, 4.09%);
-//     --c-main-surface-normal: hsl(347.68, 18.06%, 13.47%);
-//     --c-main-surface-hover: hsl(347.95, 14.71%, 17.24%);
-//     --c-main-surface-active: hsl(348.15, 12.53%, 20.96%);
-//     --c-main-divider: hsl(347.95, 14.71%, 17.24%);
-//     --c-main-text-secondary: hsl(349.02, 12.71%, 73.64%);
-//     --c-main-text-primary: hsl(349.11, 52.31%, 93.28%);
-//     --c-main-btn-normal: hsl(348.78, 6.5%, 47.2%);
-//     --c-main-btn-hover: hsl(348.83, 6.39%, 51.23%);
-//     --c-main-btn-active: hsl(348.87, 7.08%, 55.3%);
-//     --c-main-btn-text: hsl(349.47, 97.99%, 98.92%);
-//     --c-main-shadow: hsl(347.26, 24.13%, 9.55%);
+    // --c-acc-base: hsl(334.41, 97.78%, 9.5%);
+    // --c-acc-app-bg: hsl(341.33, 99.97%, 4.79%);
+    // --c-acc-surface-normal: hsl(335.18, 72.19%, 13.64%);
+    // --c-acc-surface-hover: hsl(337.11, 55.22%, 17.97%);
+    // --c-acc-surface-active: hsl(338.29, 45.84%, 22.07%);
+    // --c-acc-divider: hsl(337.11, 55.22%, 17.97%);
+    // --c-acc-text-secondary: hsl(340.95, 99.93%, 79.82%);
+    // --c-acc-text-primary: hsl(344.21, 99.94%, 94.31%);
+    // --c-acc-btn-normal: hsl(328.22, 99.8%, 44.63%);
+    // --c-acc-btn-hover: hsl(328.1, 99.78%, 48.12%);
+    // --c-acc-btn-active: hsl(332.68, 99.99%, 58.97%);
+    // --c-acc-btn-text: hsl(223.81, 0%, 100%);
+    // --c-acc-shadow: hsl(334.27, 99.92%, 9.47%);
+    // --c-main-base: hsl(341.93, 29.12%, 9.64%);
+    // --c-main-app-bg: hsl(343.55, 55.09%, 4.2%);
+    // --c-main-surface-normal: hsl(342.49, 21.8%, 13.58%);
+    // --c-main-surface-hover: hsl(342.86, 17.77%, 17.37%);
+    // --c-main-surface-active: hsl(343.13, 15.14%, 21.11%);
+    // --c-main-divider: hsl(342.86, 17.77%, 17.37%);
+    // --c-main-text-secondary: hsl(344.3, 15.69%, 73.95%);
+    // --c-main-text-primary: hsl(344.44, 67.11%, 93.61%);
+    // --c-main-btn-normal: hsl(344, 7.78%, 48.15%);
+    // --c-main-btn-hover: hsl(344.06, 7.97%, 52.19%);
+    // --c-main-btn-active: hsl(344.12, 8.85%, 56.28%);
+    // --c-main-btn-text: hsl(345.01, 99.3%, 99.22%);
+    // --c-main-shadow: hsl(341.93, 29.12%, 9.64%);
+// }
+
+// :root {
+//     --c-light-bg: #fdfdfd;
+//     --c-light-text: #111;
+//     --c-light-pink: deeppink;
+//     --c-dark-bg: #191b1c;
+//     --c-dark-text: #dddad6;
+//     --c-dark-pink: #c00068;
 // }
 
 :root {
-    --c-light-bg: #fdfdfd;
-    --c-light-text: #111;
-    --c-light-pink: deeppink;
-    --c-dark-bg: #191b1c;
-    --c-dark-text: #dddad6;
-    --c-dark-pink: #c00068;
+    --c-light-bg: hsl(344.83, 99.86%, 98.03%);
+    --c-light-text: hsl(342.25, 24.75%, 11.67%);
+    --c-light-pink: hsl(328.12, 99.82%, 47.52%);
+    --c-dark-bg: hsl(341.93, 29.12%, 9.64%);
+    --c-dark-text: hsl(344.44, 67.11%, 93.61%);
+    --c-dark-pink: hsl(328.22, 99.8%, 44.63%);
 }
-
-// :root {
-//     --c-light-bg: hsl(349.35, 99.29%, 98.05%);
-//     --c-light-text: hsl(0, 0%, 0%);
-//     --c-light-pink: hsl(331.86, 99.82%, 48.59%);
-//     --c-dark-bg: hsl(348.35, 46.87%, 4.09%);
-//     --c-dark-text: hsl(349.11, 52.31%, 93.28%);
-//     --c-dark-pink: hsl(332.02, 99.88%, 44.34%);
-// }
 
 // light theme
 :root {
     --t-bg: var(--c-light-bg);
     --t-text: var(--c-light-text);
-    --t-bg-pink: var(--c-light-pink);
-    --t-text-pink: var(--c-light-pink);
+    --t-pink-bg: var(--c-light-pink);
+    --t-pink-text: var(--c-light-pink);
 }
 
 // dark theme

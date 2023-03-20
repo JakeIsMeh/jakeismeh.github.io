@@ -8,7 +8,7 @@
 
 <style lang="scss">
     footer {
-        font-family: $header-font-family;
+        font-family: $base-font-family;
         border-top: solid 1px var(--t-text);
         font-size: 1.2rem;
         padding: $half-spacing-unit 0;
