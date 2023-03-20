@@ -72,7 +72,7 @@
 
             // Gaps between nav items, but not on the last one
             &:not(:last-child) {
-                margin-right: .75rem;
+                margin-right: .825rem;
             }
 
             &:hover,
