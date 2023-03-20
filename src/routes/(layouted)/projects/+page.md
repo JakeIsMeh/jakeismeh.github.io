@@ -2,7 +2,7 @@
     import IconExtLink from 'virtual:icons/feather/external-link';
 </script>
 
-# projects
+# Projects
 <br>
 
 **[wiki & miscellaneous resources<IconExtLink/>](https://github.com/JakeIsMeh/wiki-and-misc-resources)**<br>

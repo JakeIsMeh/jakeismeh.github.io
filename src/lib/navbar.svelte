@@ -2,6 +2,7 @@
     <h1><a href="/">JakeIsMeh</a></h1>
 
     <nav class="site-nav">
+        <!-- TODO: redo responsive navbar with focus-within -->
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
             <span class="menu-icon">
@@ -13,9 +14,9 @@
             </span>
         </label>
         <div class="trigger">
-            <a class="nav-link" href="/">home</a>
-            <a class="nav-link" href="/about/">about</a>
-            <a class="nav-link" href="/projects/">projects</a>
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/projects/">Projects</a>
         </div>
     </nav>
 </div>
@@ -35,7 +36,7 @@
         }
         &:hover,
         &:focus {
-            background-color: $background-color;
+            background-color: unset;
             color: $text-color;
         }
     }
@@ -51,6 +52,7 @@
     .site-nav {
         font-family: $header-font-family;
         float: right;
+        margin-right: -.3125em; // compensate padded link (.25em @ 1.25em)
 
         .nav-trigger {
             display: none;
@@ -64,11 +66,13 @@
             font-size: 1.25em;
             color: $text-color;
             font-weight: bold;
-            transition: 0.16s;
+            transition: .16s;
+            padding: 0 .25em;
+            margin: 0; // reset app.scss margin
 
             // Gaps between nav items, but not on the last one
             &:not(:last-child) {
-                margin-right: 20px;
+                margin-right: .75rem;
             }
 
             &:hover,

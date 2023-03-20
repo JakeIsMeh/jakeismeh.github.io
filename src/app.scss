@@ -2,8 +2,8 @@
 
 
 
-// Atkinson Hyperlegible, Manrope Bold, JetBrains Mobo
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@700&display=swap');
+// Atkinson Hyperlegible, Manrope Bold, JetBrains Mono
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@500;700&display=swap');
 
 * {
     margin: 0;
@@ -30,6 +30,8 @@ body {
 a, a:visited {
     transition: .16s;
     color: deeppink;
+    padding: .125em .25em;
+    margin: -.125em -.25em;
 }
 a:hover, a:focus {
     background-color: deeppink;

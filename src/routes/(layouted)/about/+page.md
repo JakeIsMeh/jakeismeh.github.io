@@ -2,10 +2,11 @@
     import IconExtLink from 'virtual:icons/feather/external-link';
 </script>
 
-# about
+# About
 
-driven developer interested in the backend. loves linux.
-currently studying Information Technology, interested in Computer Science!
+Detail-oriented computer science student with a multi-faceted skillset and interests
+spanning multiple domains. On a mission to reverse Wirth’s law and hoping to make an
+impact through software engineering.
 <br>
 
 <style lang="scss">
