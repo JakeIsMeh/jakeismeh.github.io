@@ -29,7 +29,7 @@ body {
 }
 
 a, a:visited {
-    transition: .16s;
+    transition: color .16s;
     color: var(--t-pink-text);
     padding: .125em .25em;
     margin: -.125em -.25em;

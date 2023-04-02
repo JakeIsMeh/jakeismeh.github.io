@@ -31,7 +31,7 @@
         text-decoration: none;
         &,
         &:visited {
-            transition: 0.16s;
+            transition: color 0.16s;
             color: var(--t-text);
         }
         &:hover,
@@ -66,7 +66,7 @@
             font-size: 1.25em;
             color: var(--t-text);
             font-weight: bold;
-            transition: .16s;
+            transition: color .16s;
             padding: 0 .25em;
             margin: 0; // reset app.scss margin
 
