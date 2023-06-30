@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 body {
@@ -25,11 +25,11 @@ body {
     max-width: 50rem;
     background-color: var(--t-bg);
     color: var(--t-text);
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 a, a:visited {
-    transition: color .16s;
+    transition: color .16s, background-color .16s;
     color: var(--t-pink-text);
     padding: .125em .25em;
     margin: -.125em -.25em;

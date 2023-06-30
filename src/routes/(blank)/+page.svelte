@@ -49,7 +49,7 @@
         font-size: 1.5em;
         color: var(--t-text);
         line-height: $base-line-height;
-        transition: color .16s;
+        transition: color .16s, background-color .16s;
         padding: 0 .25em;
         margin: 0; // reset margin.scss
     }
