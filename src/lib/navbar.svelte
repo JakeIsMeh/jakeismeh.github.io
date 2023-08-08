@@ -1,9 +1,17 @@
+<script>
+    import { afterNavigate } from '$app/navigation';
+
+    let menuOpen = false;
+
+    afterNavigate(() => {menuOpen = false;});
+</script>
+
 <div class="header">
     <h1><a href="/">JakeIsMeh</a></h1>
 
     <nav class="site-nav">
         <!-- TODO: redo responsive navbar with focus-within -->
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" bind:checked={menuOpen}/>
         <label for="nav-trigger">
             <span class="menu-icon">
                 <svg width="18px" height="15px">
@@ -51,7 +59,7 @@
     .site-nav {
         font-family: $header-font-family;
         float: right;
-        margin-right: -.3125em; // compensate padded link (.25em @ 1.25em)
+        margin-right: -0.3125em; // compensate padded link (.25em @ 1.25em)
 
         .nav-trigger {
             display: none;
@@ -65,13 +73,13 @@
             font-size: 1.25em;
             color: var(--t-text);
             font-weight: bold;
-            transition: color .16s, background-color .16s;
-            padding: 0 .25em;
+            transition: color 0.16s, background-color 0.16s;
+            padding: 0 0.25em;
             margin: 0; // reset app.scss margin
 
             // Gaps between nav items, but not on the last one
             &:not(:last-child) {
-                margin-right: .825rem;
+                margin-right: 0.825rem;
             }
 
             &:hover,
