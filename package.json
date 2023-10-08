@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@fontsource-variable/manrope": "^5.0.15",
+    "@fontsource/atkinson-hyperlegible": "^5.0.15",
     "@iconify-json/lucide": "^1.1.132",
     "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/adapter-static": "^2.0.3",
