@@ -1,8 +1,8 @@
 <script>
     import '~/app.scss';
-    import IconGitlab from 'virtual:icons/feather/gitlab';
-    import IconGitlhub from 'virtual:icons/feather/github';
-    import IconExtLink from 'virtual:icons/feather/external-link';
+    import IconGitlab from 'virtual:icons/lucide/gitlab';
+    import IconGitlhub from 'virtual:icons/lucide/github';
+    import IconExtLink from 'virtual:icons/lucide/external-link';
 </script>
 
 <div class="main">

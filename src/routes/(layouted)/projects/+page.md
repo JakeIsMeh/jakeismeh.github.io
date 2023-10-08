@@ -1,5 +1,5 @@
 <script>
-    import IconExtLink from 'virtual:icons/feather/external-link';
+    import IconExtLink from 'virtual:icons/lucide/external-link';
 </script>
 
 # Projects
