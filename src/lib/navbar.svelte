@@ -1,5 +1,6 @@
 <script>
     import { afterNavigate } from '$app/navigation';
+    import { page } from '$app/stores';
 
     let menuOpen = false;
 
@@ -22,9 +23,9 @@
             </span>
         </label>
         <div class="trigger">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/about">About</a>
-            <a class="nav-link" href="/projects">Projects</a>
+            <a class="nav-link" class:active={$page.url.pathname == "/"} href="/">Home</a>
+            <a class="nav-link" class:active={$page.url.pathname == "/about"} href="/about">About</a>
+            <a class="nav-link" class:active={$page.url.pathname == "/projects"} href="/projects">Projects</a>
         </div>
     </nav>
 </div>
@@ -83,7 +84,8 @@
             }
 
             &:hover,
-            &:focus {
+            &:focus,
+            &.active {
                 color: var(--t-bg);
                 background-color: var(--t-text);
             }

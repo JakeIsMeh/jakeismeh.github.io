@@ -9,7 +9,9 @@ const config = {
 
 	kit: {
 //		prerender : { default: true },
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: '404.html'
+		}),
 	},
 
 	preprocess: [

@@ -21,4 +21,3 @@ My device tree for the Xiaomi Mi A2 Lite (Codename: daisy_sprout) from when ther
 **[cmdAnywhere<IconExtLink/>](https://github.com/JakeIsMeh/cmdAnywhere)**<br>
 *Note: this project is probably done for the rest of time, as Powershell takes over the windows terminal market and batch files get depreciated.*<br/>
 This is a script I made in Primary 5 and updated over the years. If you can run a batch file, you can run any command with this.
-
