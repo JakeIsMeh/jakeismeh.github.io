@@ -1,0 +1,133 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+// @use "variables.scss" as *;
+
+// Font Stack: Atkinson Hyperlegible, Manrope Bold, JetBrains Mono
+@import '@fontsource/atkinson-hyperlegible/400.css';
+@import '@fontsource/atkinson-hyperlegible/700.css';
+@import '@fontsource/atkinson-hyperlegible/400-italic.css';
+@import '@fontsource/atkinson-hyperlegible/700-italic.css';
+@import '@fontsource-variable/manrope';
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#__nuxt {
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100svh;
+    max-width: 50rem;
+    margin: auto;
+}
+
+body {
+    font: $base-font-size $base-font-family;
+    font-variant-ligatures: normal;
+    background-color: var(--t-bg);
+    color: var(--t-text);
+}
+
+a,
+a:visited {
+    transition: color .16s, background-color .16s;
+    color: var(--t-pink-text);
+    padding: .125em .25em;
+    margin: -.125em -.25em;
+    border-radius: $radius;
+}
+
+a:hover,
+a:focus {
+    background-color: var(--t-pink-bg);
+    color: var(--c-light-bg);
+
+}
+
+@include media-query($on-laptop + (calc($spacing-unit))) {
+    #__nuxt {
+        margin: 0 calc($spacing-unit / 2);
+    }
+}
+
+blockquote {
+    padding-left: $spacing-unit;
+    margin: calc($spacing-unit/2) 0;
+    line-height: 2;
+    font-size: relative-font-size(0.875);
+    border-left: $radius solid lightgrey;
+    border-radius: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header-font-family;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
+ol {
+    padding-left: 1.25em;
+    list-style-type: '-  ';
+}
+
+code,
+kbd,
+pre {
+    font-family: $mono-font-family;
+}
+
+// TODO: adjust this for light/dark mode!
+pre {
+    background-color: lightgrey;
+    font-size: relative-font-size(0.875);
+    overflow: auto;
+    padding: calc($spacing-unit / 2);
+    margin: calc($spacing-unit / 2) 0;
+    border-radius: $radius;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.icon {
+    vertical-align: sub;
+}
+
+a .link-icon {
+    vertical-align: middle;
+    padding: 0;
+    width: .8em;
+    height: .8em;
+    margin-left: 0em;
+}
+
+.hstack {
+    display: flex;
+    flex-direction: row;
+}
+
+.vstack {
+    display: flex;
+    flex-direction: column;
+}
