@@ -2,10 +2,10 @@
 // @use "variables.scss" as *;
 
 // Font Stack: Atkinson Hyperlegible, Manrope Bold, JetBrains Mono
-@import '@fontsource/atkinson-hyperlegible/400.css';
-@import '@fontsource/atkinson-hyperlegible/700.css';
-@import '@fontsource/atkinson-hyperlegible/400-italic.css';
-@import '@fontsource/atkinson-hyperlegible/700-italic.css';
+// @import '@fontsource/atkinson-hyperlegible/400.css';
+// @import '@fontsource/atkinson-hyperlegible/700.css';
+// @import '@fontsource/atkinson-hyperlegible/400-italic.css';
+// @import '@fontsource/atkinson-hyperlegible/700-italic.css';
 @import '@fontsource-variable/manrope';
 
 html {
@@ -29,7 +29,8 @@ html {
 }
 
 body {
-    font: $base-font-size $base-font-family;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
     font-variant-ligatures: normal;
     background-color: var(--t-bg);
     color: var(--t-text);
