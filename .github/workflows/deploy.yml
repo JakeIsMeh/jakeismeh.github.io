@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+env:
+  COREPACK_ENABLE_STRICT: 0
 jobs:
   build:
     runs-on: ubuntu-latest
