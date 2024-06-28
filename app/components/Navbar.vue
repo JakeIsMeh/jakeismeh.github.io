@@ -1,5 +1,4 @@
 <script setup>
-import IconList from '~icons/ph/list-bold?width=auto&height=auto';
 import { onClickOutside } from "@vueuse/core"
 
 const router = useRouter();
@@ -20,16 +19,13 @@ router.afterEach(() => { checked.value = false; });
             <!-- TODO: redo responsive navbar with focus-within -->
             <input type="checkbox" id="nav-trigger" class="nav-trigger" v-model="checked" />
             <label for="nav-trigger">
-                <span class="menu-icon">
-                    <IconList />
-                </span>
+                <Icon name="ph:list-bold" class="menu-icon"/>
             </label>
             <div class="trigger">
-                <!-- <NuxtLink class="nav-link" :class="{ active: $route.path == '/' }" href="/">Home</NuxtLink> -->
-                <NuxtLink class="nav-link" :class="{ active: $route.path == '/about' }" href="/about">about</NuxtLink>
-                <NuxtLink class="nav-link" :class="{ active: $route.path == '/projects' }" href="/projects">projects
+                <NuxtLink class="nav-link" href="/about">about</NuxtLink>
+                <NuxtLink class="nav-link" href="/projects">projects
                 </NuxtLink>
-                <NuxtLink class="nav-link" :class="{ active: $route.fullPath.startsWith('/blog') }" href="/blog">blog
+                <NuxtLink class="nav-link" :class="{ active: $route.fullPath.startsWith('/musings') }" href="/musings">musings
                 </NuxtLink>
             </div>
         </nav>
@@ -90,7 +86,8 @@ h1 {
 
         &:hover,
         &:focus,
-        &.active {
+        &.active,
+        &[aria-current]:not([aria-current="false"]) {
             color: var(--t-bg);
             background-color: var(--t-text);
         }
@@ -121,18 +118,9 @@ h1 {
 
         .menu-icon {
             display: block;
-            float: right;
-            width: 2.25rem;
-            height: 2.25rem;
-            line-height: 0;
-            text-align: center;
-
-            .icon {
-                width: auto;
-                height: auto;
-                padding: 6px;
-                fill: currentColor;
-            }
+            padding: 5px;
+            margin: 3px;
+            fill: currentColor;
         }
 
         input~.trigger {
