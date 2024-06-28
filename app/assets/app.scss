@@ -132,3 +132,15 @@ a .link-icon {
     display: flex;
     flex-direction: column;
 }
+
+.gap-1 {
+    gap: $quarter-spacing-unit;
+}
+
+.gap-2 {
+    gap: $half-spacing-unit;
+}
+
+.gap-3 {
+    gap: $spacing-unit;
+}

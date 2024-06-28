@@ -6,10 +6,10 @@
             <p>site content CC-BY-4.0</p>
         </div>
         <div id="gifs">
-            <a ><img src="/public/j04q1x.png" alt=""></a>
-            <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank"><img src="/public/touhou.gif" alt=""></a>
-            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank"><img src="/public/firefox4.gif" alt=""></a>
-            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank"><img src="/public/bunbrowser.gif" alt=""></a>
+            <a ><img src="/j04q1x.png" alt=""></a>
+            <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank"><img src="/touhou.gif" alt=""></a>
+            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank"><img src="/firefox4.gif" alt=""></a>
+            <img src="/i-know-her.png" alt="">
         </div>
     </footer>
 </template>
@@ -46,6 +46,11 @@ footer {
         margin: 0;
     }
 
+    img, picture {
+        width: 88px;
+        height: 31px;
+        aspect-ratio: calc(88 / 31);
+    }
 }
 
 @include media-query($on-palm) {

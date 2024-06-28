@@ -1,20 +1,16 @@
 <script setup>
 definePageMeta({ layout: "blank" });
-useHead({ title: "" });
-
-import IconGitlab from '~icons/ph/gitlab-logo-simple-bold';
-import IconGithub from '~icons/ph/github-logo-bold';
-import IconExtLink from '~icons/ph/arrow-up-right-bold';
+useHead({ title: "" }); 
 </script>
 
 <template>
     <div class="main vstack">
         <img src="https://avatars.githubusercontent.com/JakeIsMeh" alt="profile pic" class="pfp" />
-        <div class="spacer" />
+        <div class="spacer"></div>
         <h1>
             <NuxtLink href="/">JakeIsMeh</NuxtLink>
         </h1>
-        <div class="spacer" />
+        <div class="spacer"></div>
         <p>
             <NuxtLink href="/about" class="nav-link">about</NuxtLink>
         </p>
@@ -22,14 +18,14 @@ import IconExtLink from '~icons/ph/arrow-up-right-bold';
             <NuxtLink href="/projects" class="nav-link">projects</NuxtLink>
         </p>
         <p>
-            <NuxtLink href="/blog" class="nav-link">blog</NuxtLink>
+            <NuxtLink href="/musings" class="nav-link">musings</NuxtLink>
         </p>
-        <div class="spacer" />
+        <div class="spacer"></div>
         <p><a href="https://gitlab.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
-                <IconGitlab />gitlab<IconExtLink />
+                <Icon name="ph:gitlab-logo-simple-bold" />gitlab<IconExtLink />
             </a></p>
         <p><a href="https://github.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
-                <IconGithub />github<IconExtLink />
+                <Icon name="ph:github-logo-bold" />github<IconExtLink />
             </a></p>
     </div>
 </template>

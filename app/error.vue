@@ -13,11 +13,9 @@ const handleError = () => clearError({ redirect: '/' })
     <NuxtLoadingIndicator />
     <NuxtErrorBoundary>
         <NuxtLayout>
-            <NuxtErrorBoundary>
-                <h1>{{ props.error?.statusCode }}</h1>
-                <!-- <p>{{ props.error?.statusMessage }}</p> -->
-                <code>{{ props.error?.message }}</code>
-            </NuxtErrorBoundary>
+            <h1>{{ props.error?.statusCode }}</h1>
+            <!-- <p>{{ props.error?.statusMessage }}</p> -->
+            <code>{{ props.error?.message }}</code>
         </NuxtLayout>
     </NuxtErrorBoundary>
 </template>

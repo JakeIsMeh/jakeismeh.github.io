@@ -1,17 +1,37 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Icons from 'unplugin-icons/vite';
 
 export default defineNuxtConfig({
+  future: {
+    compatibilityVersion: 4,
+  },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      }
+    }
+  },
   devtools: { enabled: true },
   experimental: {
     componentIslands: true
   },
-  modules: ['unplugin-icons/nuxt', '@nuxt/content', "@nuxt/fonts", "nuxt-build-cache"],
+  modules: [
+    '@nuxt/content',
+    "@nuxt/fonts",
+    "nuxt-build-cache",
+    "@nuxt/image",
+    '@nuxt/icon',
+  ],
   content: {
     // ... options
   },
   fonts: {
     priority: ['fontsource', 'bunny', 'google'],
+  },
+  icon: {
+    size: '1em',
+    class: 'icon',
+    aliases: {},
   },
   vite: {
     vue: {
@@ -21,18 +41,7 @@ export default defineNuxtConfig({
         },
       },
     },
-    plugins: [
-      Icons({
-        compiler: 'vue3',
-        scale: 1.0,
-        defaultClass: 'icon',
-        iconCustomizer(collection, icon, props) {
-          if (collection === 'ph' && icon === 'arrow-up-right-bold') {
-            props.class = "icon link-icon"
-          }
-        }
-      })
-    ],
+    plugins: [],
     css: {
       preprocessorOptions: {
         scss: {
