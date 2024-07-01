@@ -1,0 +1,86 @@
+@use "~/assets/variables.scss" as *;
+@use "@picocss/pico/scss/colors" as *;
+
+%shiki {
+    &>pre {
+        // css styles for shiki
+        &.shiki>code {
+            &>span {
+                display: block;
+            }
+    
+            .line {
+                &.diff {
+                    &::before {
+                        position: absolute;
+                        left: 10px;
+                    }
+    
+                    &.remove {
+                        &::before {
+                            content: "-";
+                        }
+    
+                        background-color: color-mix(in srgb, $red-550, transparent 60%);
+                    }
+    
+                    &.add {
+                        &::before {
+                            content: "+";
+                        }
+    
+                        background-color: color-mix(in srgb, $jade-450, transparent 60%);
+                    }
+                }
+    
+                &.highlighted, &.highlight {
+                    background-color: color-mix(in srgb, $grey-600, transparent 50%);
+    
+                    &.error {
+                        background-color: color-mix(in srgb, $red-550, transparent 60%);
+                    }
+    
+                    &.warning {
+                        background-color: color-mix(in srgb, $amber-450, transparent 50%);
+                    }
+                }
+    
+                // not implemented bc nuxt content does not enable this
+                // &.highlighted-word {}
+    
+                // not implemented bc nuxt content does not enable this
+                // span.tab::before {
+                //     content: '⇥';
+                //     position: absolute;
+                //     opacity: 0.3;
+                // }
+    
+                // span.space::before {
+                //     content: '·';
+                //     position: absolute;
+                //     opacity: 0.3;
+                // }
+            }
+        }
+    
+        &.has-focused {
+            &>code .line {
+                filter: blur(.1rem);
+                opacity: .4;
+                transition: filter .16s, opacity .16s;
+    
+                &.focused {
+                    filter: none;
+                    opacity: 1;
+                }
+            }
+    
+            &:hover {
+                &>code .line {
+                    filter: none;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

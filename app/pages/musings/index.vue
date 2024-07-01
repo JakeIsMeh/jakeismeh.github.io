@@ -1,14 +1,15 @@
 <script setup>
 import { formatDate } from '@vueuse/core';
 
-useHead({ title: "blog" });
 const { data, pending, error, refresh } = await useAsyncData('musings', () => {
     return queryContent('musings')
-        .only(['_path', 'title', 'subtitle', 'time', 'tags'])
+        .only(['_path', 'title', 'subtitle', 'date', 'time', 'tags'])
+        .where({"title": { $ne: "Test"}})
         .sort({
             tags: 1,
             subtitle: 1,
             title: 1,
+            date: -1,
             time: -1,
         })
         .find()
@@ -17,20 +18,29 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
 </script>
 
 <template>
+    <Title>musings</Title>
     <h1>musings</h1>
     <br>
     <main id="posts" class="vstack">
-        <p>come back soon :)</p>
-        <!-- <div v-for="article in data" class="vstack gap-1">
+        <div v-if="data.length > 0" v-for="article in data" class="vstack gap-1">
             <h2>
                 <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
             </h2>
             <span class="hstack gap-1">
-                {{ formatDate(new Date(article.time), "DD MMM YYYY") }}
+                <template v-if="article.time || article.date">
+                    {{ formatDate(new Date(article.time ?? article.date), "DD MMM YYYY") }}
+                </template>
+                <DevOnly v-else>
+                    <p class="devwarn">Missing date</p>
+                </DevOnly>
                 <Tags :tags="article.tags" />
             </span>
-            <p v-if="article.subtitle">{{ article.subtitle }}</p>
-        </div> -->
+            <p v-if="article.subtitle"><small><i>{{ article.subtitle }}</i></small></p>
+            <DevOnly v-else>
+                <p class="devinfo">No subtitle</p>
+            </DevOnly>
+        </div>
+        <p v-else>come back soon :)</p>
     </main>
 </template>
 
@@ -42,7 +52,7 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
 
 #posts>* {
     padding: $half-spacing-unit 0;
-    border-bottom: solid 1px var(--t-text);
+    border-bottom: solid 0.0625rem var(--t-text);
 }
 
 #posts> :last-of-type {

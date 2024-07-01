@@ -1,0 +1,1 @@
+export function castArray(value:any) { return value ? Array.isArray(value) ? value : [value] : [] };
