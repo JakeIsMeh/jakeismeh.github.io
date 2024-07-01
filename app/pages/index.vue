@@ -1,10 +1,9 @@
 <script setup>
 definePageMeta({ layout: "blank" });
-useHead({ title: "" }); 
 </script>
 
 <template>
-    <div class="main vstack">
+    <main class="main vstack">
         <img src="https://avatars.githubusercontent.com/JakeIsMeh" alt="profile pic" class="pfp" />
         <div class="spacer"></div>
         <h1>
@@ -27,7 +26,7 @@ useHead({ title: "" });
         <p><a href="https://github.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
                 <Icon name="ph:github-logo-bold" />github<IconExtLink />
             </a></p>
-    </div>
+    </main>
 </template>
 
 <style lang="scss" scoped>
@@ -67,7 +66,7 @@ a.nav-link {
     padding: 0 .25em;
     margin: 0; // reset margin.scss
 
-    .icon:first-child {
+    .iconify:first-child {
         margin-right:.2em;
     }
 }
@@ -81,7 +80,7 @@ a.nav-link:focus {
 img.pfp {
     width: auto;
     max-height: 16rem;
-    border: calc($radius / 4) solid var(--t-text);
+    border: 2px solid;
     border-radius: $radius;
     background-color: var(--t-pink);
 }

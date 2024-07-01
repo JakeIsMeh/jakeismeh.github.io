@@ -1,94 +1,61 @@
-// from ardov's color playground
-// .inspiration {
-//     // Light Colors
-    // --c-acc-base: hsl(223.81, 0%, 100%);
-    // --c-acc-app-bg: hsl(344.83, 99.86%, 98.03%);
-    // --c-acc-surface-normal: hsl(344.64, 99.8%, 96.84%);
-    // --c-acc-surface-hover: hsl(344.09, 99.9%, 93.62%);
-    // --c-acc-surface-active: hsl(343.47, 99.9%, 90.33%);
-    // --c-acc-divider: hsl(344.09, 99.9%, 93.62%);
-    // --c-acc-text-secondary: hsl(328.57, 99.8%, 36.79%);
-    // --c-acc-text-primary: hsl(0, 0%, 0%);
-    // --c-acc-btn-normal: hsl(328.12, 99.82%, 47.52%);
-    // --c-acc-btn-hover: hsl(328.23, 99.86%, 44.04%);
-    // --c-acc-btn-active: hsl(328.36, 99.98%, 40.58%);
-    // --c-acc-btn-text: hsl(223.81, 0%, 100%);
-    // --c-acc-shadow: hsl(334.27, 99.92%, 9.47%);
-    // --c-main-base: hsl(223.81, 0%, 100%);
-    // --c-main-app-bg: hsl(344.83, 99.86%, 98.03%);
-    // --c-main-surface-normal: hsl(344.64, 99.8%, 96.84%);
-    // --c-main-surface-hover: hsl(344.43, 59.61%, 92.82%);
-    // --c-main-surface-active: hsl(344.41, 36.42%, 88.37%);
-    // --c-main-divider: hsl(344.43, 59.61%, 92.82%);
-    // --c-main-text-secondary: hsl(343.96, 8.09%, 45.9%);
-    // --c-main-text-primary: hsl(342.25, 24.75%, 11.67%);
-    // --c-main-btn-normal: hsl(344.05, 7.83%, 51.49%);
-    // --c-main-btn-hover: hsl(343.98, 7.88%, 47.45%);
-    // --c-main-btn-active: hsl(343.91, 8.45%, 43.46%);
-    // --c-main-btn-text: hsl(223.81, 0%, 100%);
-    // --c-main-shadow: hsl(341.93, 29.12%, 9.64%);
-
-//     // Dark colors
-    // --c-acc-base: hsl(334.41, 97.78%, 9.5%);
-    // --c-acc-app-bg: hsl(341.33, 99.97%, 4.79%);
-    // --c-acc-surface-normal: hsl(335.18, 72.19%, 13.64%);
-    // --c-acc-surface-hover: hsl(337.11, 55.22%, 17.97%);
-    // --c-acc-surface-active: hsl(338.29, 45.84%, 22.07%);
-    // --c-acc-divider: hsl(337.11, 55.22%, 17.97%);
-    // --c-acc-text-secondary: hsl(340.95, 99.93%, 79.82%);
-    // --c-acc-text-primary: hsl(344.21, 99.94%, 94.31%);
-    // --c-acc-btn-normal: hsl(328.22, 99.8%, 44.63%);
-    // --c-acc-btn-hover: hsl(328.1, 99.78%, 48.12%);
-    // --c-acc-btn-active: hsl(332.68, 99.99%, 58.97%);
-    // --c-acc-btn-text: hsl(223.81, 0%, 100%);
-    // --c-acc-shadow: hsl(334.27, 99.92%, 9.47%);
-    // --c-main-base: hsl(341.93, 29.12%, 9.64%);
-    // --c-main-app-bg: hsl(343.55, 55.09%, 4.2%);
-    // --c-main-surface-normal: hsl(342.49, 21.8%, 13.58%);
-    // --c-main-surface-hover: hsl(342.86, 17.77%, 17.37%);
-    // --c-main-surface-active: hsl(343.13, 15.14%, 21.11%);
-    // --c-main-divider: hsl(342.86, 17.77%, 17.37%);
-    // --c-main-text-secondary: hsl(344.3, 15.69%, 73.95%);
-    // --c-main-text-primary: hsl(344.44, 67.11%, 93.61%);
-    // --c-main-btn-normal: hsl(344, 7.78%, 48.15%);
-    // --c-main-btn-hover: hsl(344.06, 7.97%, 52.19%);
-    // --c-main-btn-active: hsl(344.12, 8.85%, 56.28%);
-    // --c-main-btn-text: hsl(345.01, 99.3%, 99.22%);
-    // --c-main-shadow: hsl(341.93, 29.12%, 9.64%);
-// }
+@use '@picocss/pico/scss/colors' as *;
 
 // :root {
-//     --c-light-bg: #fdfdfd;
-//     --c-light-text: #111;
-//     --c-light-pink: deeppink;
-//     --c-dark-bg: #191b1c;
-//     --c-dark-text: #dddad6;
-//     --c-dark-pink: #c00068;
+//     --c-light-bg: hsl(334, 100%, 94%);
+//     --c-light-text: hsl(342.25, 24.75%, 11.67%);
+//     --c-light-pink: hsl(328.12, 99.82%, 47.52%);
+//     --c-dark-bg: hsl(341.93, 29.12%, 9.64%);
+//     --c-dark-text: hsl(344.00, 70%, 86%);
+//     --c-dark-pink: hsl(328.22, 99.8%, 44.63%);
 // }
 
 :root {
-    --c-light-bg: hsl(334, 100%, 94%);
-    --c-light-text: hsl(342.25, 24.75%, 11.67%);
-    --c-light-pink: hsl(328.12, 99.82%, 47.52%);
-    --c-dark-bg: hsl(341.93, 29.12%, 9.64%);
-    --c-dark-text: hsl(344.00, 70%, 86%);
-    --c-dark-pink: hsl(328.22, 99.8%, 44.63%);
+    --c-light-bg: #{$fuchsia-100};
+    --c-light-bg-el1: #{$fuchsia-50};
+    --c-light-bg-el2: #{$fuchsia-100};
+    // --c-light-text: #{$fuchsia-950};
+    --c-light-text: #{$black};
+    --c-light-pink: #{$pink-450};
+    --c-dark-bg: #{$pink-950};
+    --c-dark-bg-el1: #{$pink-900};
+    --c-dark-bg-el2:#{$pink-850};
+    --c-dark-text: #{$pink-100};
+    --c-dark-pink: #{$pink-450};
 }
 
-// light theme
-:root {
+@mixin __light {
     --t-bg: var(--c-light-bg);
+    --t-bg-el1: var(--c-light-bg-el1);
+    --t-bg-el2: var(--c-light-bg-el2);
     --t-text: var(--c-light-text);
     --t-pink-bg: var(--c-light-pink);
     --t-pink-text: var(--c-light-pink);
 }
 
+@mixin __dark {
+    --t-bg: var(--c-dark-bg);
+    --t-bg-el1: var(--c-dark-bg-el1);
+    --t-bg-el2: var(--c-dark-bg-el2);
+    --t-text: var(--c-dark-text);
+    --t-pink-bg: var(--c-dark-pink);
+    --t-pink-text: var(--c-dark-pink);
+}
+
+.light-mode {
+    @include __light;
+}
+
+.dark-mode {
+    @include __dark;
+}
+
+:root {
+    @include __light;
+}
+
 // dark theme
 @media (prefers-color-scheme: dark) {
     :root {
-        --t-bg: var(--c-dark-bg);
-        --t-text: var(--c-dark-text);
-        --t-pink-bg: var(--c-dark-pink);
-        --t-pink-text: var(--c-light-pink);
+        @include __dark;
     }
 }

@@ -1,16 +1,11 @@
 <script setup>
 import "assets/app.scss"
 
-const route = useRoute()
-
-useHead({ 
-    titleTemplate: (title) => { return title ? `${title} | JakeIsMeh` : 'JakeIsMeh' }, 
-})
-
 </script>
 
 <template>
-    <NuxtLoadingIndicator color="var(--t-pink-text)" />
+    <NuxtRouteAnnouncer />
+    <NuxtLoadingIndicator color="var(--t-pink-bg)" />
         <NuxtErrorBoundary>
             <NuxtLayout>
                 <NuxtErrorBoundary>

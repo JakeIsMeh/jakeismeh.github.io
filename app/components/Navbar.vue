@@ -55,8 +55,8 @@ h1>a {
 
 .header {
     margin-bottom: $half-spacing-unit;
-    border-bottom: 1px solid var(--t-text);
-    padding: $half-spacing-unit 0;
+    border-bottom: 0.0625rem solid var(--t-text);
+    padding: $quarter-spacing-unit 0;
 }
 
 h1 {

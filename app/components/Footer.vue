@@ -6,9 +6,10 @@
             <p>site content CC-BY-4.0</p>
         </div>
         <div id="gifs">
-            <a ><img src="/j04q1x.png" alt=""></a>
+            <a><img src="/j04q1x.png" alt=""></a>
             <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank"><img src="/touhou.gif" alt=""></a>
-            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank"><img src="/firefox4.gif" alt=""></a>
+            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank"><img
+                    src="/firefox4.gif" alt=""></a>
             <img src="/i-know-her.png" alt="">
         </div>
     </footer>
@@ -18,7 +19,7 @@
 footer {
     justify-content: space-between;
     align-content: center;
-    border-top: solid 1px var(--t-text);
+    border-top: solid 0.0625rem var(--t-text);
     font-size: 1em;
     padding: $half-spacing-unit 0;
     margin-top: $half-spacing-unit;
@@ -33,7 +34,6 @@ footer {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: column;
-    direction: rtl;
     gap: 1rem;
 
     :nth-child(2n) {
@@ -46,7 +46,8 @@ footer {
         margin: 0;
     }
 
-    img, picture {
+    img,
+    picture {
         width: 88px;
         height: 31px;
         aspect-ratio: calc(88 / 31);

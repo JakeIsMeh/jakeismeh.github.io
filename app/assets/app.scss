@@ -1,12 +1,5 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
-// @use "variables.scss" as *;
-
-// Font Stack: Atkinson Hyperlegible, Manrope Bold, JetBrains Mono
-// @import '@fontsource/atkinson-hyperlegible/400.css';
-// @import '@fontsource/atkinson-hyperlegible/700.css';
-// @import '@fontsource/atkinson-hyperlegible/400-italic.css';
-// @import '@fontsource/atkinson-hyperlegible/700-italic.css';
-@import '@fontsource-variable/manrope';
+@import 'katex/dist/katex.css';
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -16,6 +9,18 @@ html {
 * {
     margin: 0;
     padding: 0;
+
+    &:focus {
+        outline-color: transparent;
+        outline-style: solid;
+        box-shadow: 0 0 0 3px var(--t-pink-bg);
+        transition: box-shadow 0.10s;
+    }
+}
+
+::selection {
+    background-color: color-mix(in srgb, var(--t-pink-bg), transparent 70%);
+    // color: color-mix(in srgb, var(--t-pink-bg), currentcolor 80%);
 }
 
 #__nuxt {
@@ -34,6 +39,7 @@ body {
     font-variant-ligatures: normal;
     background-color: var(--t-bg);
     color: var(--t-text);
+    transition: color .16s, background-color .16s;
 }
 
 a,
@@ -52,19 +58,20 @@ a:focus {
 
 }
 
-@include media-query($on-laptop + (calc($spacing-unit))) {
+@include media-query($on-laptop + $spacing-unit) {
     #__nuxt {
-        margin: 0 calc($spacing-unit / 2);
+        margin: 0 $half-spacing-unit;
     }
 }
 
 blockquote {
-    padding-left: $spacing-unit;
-    margin: calc($spacing-unit/2) 0;
-    line-height: 2;
-    font-size: relative-font-size(0.875);
-    border-left: $radius solid lightgrey;
-    border-radius: 0;
+    @include relative-font-size(0.875);
+    transition: color .16s, background-color .16s, border-inline-start .16s;
+    padding: $quarter-spacing-unit $half-spacing-unit;
+    line-height: 1.5;
+    border-inline-start: $radius solid;
+    background-color: var(--t-bg-el1);
+    border-radius: $radius;
 }
 
 h1,
@@ -81,27 +88,61 @@ button,
 textarea,
 select {
     font: inherit;
+    color: var(--t-text);
+    background-color: var(--t-bg-el1);
+    border: 0.0625rem solid;
+    border-radius: $half-radius;
 }
+
+button,
+input[type=reset],
+input[type=submit],
+select {
+    transition: color .16s, background-color .16s;
+
+    &:hover {
+        background-color: var(--t-text);
+        color: var(--t-bg);
+    }
+
+    &:active {
+        background-color: var(--t-pink-bg);
+        border: 0.0625rem solid var(--t-pink-bg);
+        color: var(--t-text);
+    }
+}
+
 
 ul,
 ol {
     padding-left: 1.25em;
-    list-style-type: '-  ';
+}
+
+// ul {
+//     list-style-type: '-  ';
+// }
+
+// for markdown content
+ul.contains-task-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $quarter-spacing-unit;
 }
 
 code,
-kbd,
-pre {
+kbd {
     font-family: $mono-font-family;
+    font-size: 0.8em;
 }
 
-// TODO: adjust this for light/dark mode!
 pre {
-    background-color: lightgrey;
-    font-size: relative-font-size(0.875);
-    overflow: auto;
-    padding: calc($spacing-unit / 2);
-    margin: calc($spacing-unit / 2) 0;
+    font-family: $mono-font-family;
+    background-color: var(--t-bg-el1);
+    // overflow: scroll;
+    padding: $half-spacing-unit;
+    // margin: $half-spacing-unit 0;
     border-radius: $radius;
 }
 
@@ -111,7 +152,36 @@ video {
     height: auto;
 }
 
-.icon {
+table {
+    border-collapse: collapse;
+    border-radius: $radius;
+
+    // does not work :(
+    // // hack to get rounded corners
+    // border: hidden;
+    // box-shadow: 0 0 0 0.0625rem var(--t-text);
+}
+
+
+th, td {
+    border: 0.0625rem solid;
+    padding: $quarter-spacing-unit;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--t-bg-el1);
+}
+
+tr:nth-child(even) {
+    background-color: var(--t-bg-el2);
+}
+
+thead th:empty {
+    display: none;
+}
+
+.iconify {
+    // background-color: var(--t-text) !important;
     vertical-align: sub;
 }
 
@@ -143,4 +213,27 @@ a .link-icon {
 
 .gap-3 {
     gap: $spacing-unit;
+}
+
+.el1 {
+    background-color: var(--t-bg-el1);
+}
+
+.el2 {
+    background-color: var(--t-bg-el2);
+}
+
+.devwarn, .devinfo {
+    padding: $quarter-spacing-unit;
+    border-radius: $radius;
+}
+
+.devwarn {
+    background-color: red;
+    color: white;
+}
+
+.devinfo {
+    background-color: gold;
+    color: black;
 }
