@@ -52,7 +52,7 @@ footer {
     img, picture {
         width: 88px;
         height: 31px;
-        aspect-ratio: calc(88 / 31);
+        aspect-ratio: 88 / 31;
     }
 }
 
