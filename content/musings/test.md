@@ -1,13 +1,16 @@
 ---
-# title: "My first blog post"
-# subtitle: "This is my first blog post"
+title: "Test"
+subtitle: "You should never be able to see this"
 tags: ["testing", "hello"]
 
 # time: "2024-02-24 20:17:58Z"
-date: "2024-02-24"
+date: "1999-06-10"
 ---
 
-This is my first blog post. I hope you will enjoy it.
+This is a sentence.
+This is also a sentence.
+This is another sentence that drags on for a bit longer but not too long.
+This is yet another sentence that drags on for a bit longer but now it is getting a bit too long.
 
 - abc
 - def
@@ -82,7 +85,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 |  |  |
 | ----------- | ----------- |
-| Header | Title |
+| Paragraph | Text | 
+| Paragraph | Text | 
 | Paragraph | Text | 
 | Paragraph | Text | 
 
@@ -103,7 +107,7 @@ Here's a sentence with a footnote. [^1]
 ###### [abc](https://abc.xyz)
 
 - [x] build website
-- [ ] build blog
+- [x] build blog
 - [ ] ship it
 
 :heart: :sob: :scream:
