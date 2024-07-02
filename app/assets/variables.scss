@@ -17,10 +17,11 @@ $base-font-weight: 400 !default;
 $small-font-size:  relative-font-size(0.875) !default;
 $base-line-height: 1.3 !default;
 
-$spacing-unit:          32px !default;
-$half-spacing-unit:     calc($spacing-unit/2) !default;
-$quarter-spacing-unit:  calc($spacing-unit/4) !default;
-$eighth-spacing-unit:  calc($spacing-unit/8) !default;
+$spacing-unit:            32px !default;
+$half-spacing-unit:       calc($spacing-unit/2) !default;
+$quarter-spacing-unit:    calc($spacing-unit/4) !default;
+$eighth-spacing-unit:     calc($spacing-unit/8) !default;
+$sixteenth-spacing-unit:  calc($spacing-unit/16) !default;
 
 $table-text-align: left !default;
 
