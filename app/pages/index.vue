@@ -80,7 +80,7 @@ a.nav-link:focus {
     background-color: var(--t-text);
 }
 
-picture.pfp {
+img.pfp {
     width: 16rem;
     height: 16rem;
     border: 2px solid;
