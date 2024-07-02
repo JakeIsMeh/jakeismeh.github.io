@@ -3,58 +3,68 @@
 
 %shiki {
     &>pre {
+
         // css styles for shiki
         &.shiki>code {
             &>span {
                 display: block;
             }
-    
+
             .line {
+
+                // handle dark mode
+                @media (prefers-color-scheme: dark) {
+                    span {
+                        color: var(--shiki-d) !important;
+                    }
+                }
+
                 &.diff {
                     &::before {
                         position: absolute;
                         // left: $half-spacing-unit;
                     }
-    
+
                     &.remove {
                         &::before {
                             content: "-";
                         }
-    
+
                         background-color: color-mix(in srgb, $red-550, transparent 60%);
                     }
-    
+
                     &.add {
                         &::before {
                             content: "+";
                         }
-    
+
                         background-color: color-mix(in srgb, $jade-450, transparent 60%);
                     }
                 }
-    
-                &.highlighted, &.highlight {
+
+                &.highlighted,
+                &.highlight {
                     background-color: color-mix(in srgb, $grey-600, transparent 70%);
-    
+
                     &.error {
                         background-color: color-mix(in srgb, $red-550, transparent 60%);
                     }
-    
+
                     &.warning {
                         background-color: color-mix(in srgb, $amber-450, transparent 50%);
                     }
                 }
-    
+
                 // not implemented bc nuxt content does not enable this
                 // &.highlighted-word {}
-    
+
                 // not implemented bc nuxt content does not enable this
                 // span.tab::before {
                 //     content: '⇥';
                 //     position: absolute;
                 //     opacity: 0.3;
                 // }
-    
+
                 // span.space::before {
                 //     content: '·';
                 //     position: absolute;
@@ -62,19 +72,19 @@
                 // }
             }
         }
-    
+
         &.has-focused {
             &>code .line {
                 filter: blur(.125rem);
                 opacity: .6;
                 transition: filter .16s, opacity .16s;
-    
+
                 &.focused {
                     filter: none;
                     opacity: 1;
                 }
             }
-    
+
             &:hover {
                 &>code .line {
                     filter: none;

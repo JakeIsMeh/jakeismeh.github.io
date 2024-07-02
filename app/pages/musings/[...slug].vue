@@ -34,4 +34,6 @@ import { formatDate } from '@vueuse/core';
     </ContentDoc>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import 'katex/dist/katex.css';
+</style>

@@ -58,11 +58,9 @@ export default defineNuxtConfig({
     'nuxt-build-cache',
     '@nuxt/image',
     '@nuxt/icon',
-    "nuxt-purgecss",
     "@nuxtjs/critters",
-    // "nuxt-og-image"
+    // "nuxt-og-image",
     "nuxt-content-assets",
-    "@nuxtjs/color-mode"
   ],
   content: {
     markdown: {
@@ -71,8 +69,8 @@ export default defineNuxtConfig({
     },
     highlight: {
       theme: {
-        default: 'monokai',
-        "light-mode": 'github-light',
+        default: 'min-light',
+        d: 'monokai',
       },
       langs: [
         'js', 'jsx', 'json', 'ts', 'tsx', 'vue', 'css', 'html', 'vue', 'bash', 'md', 'mdc', 'yaml',
@@ -90,9 +88,6 @@ export default defineNuxtConfig({
     size: '1em',
     // class: 'icon',
     aliases: {},
-  },
-  purgecss: {
-    safelist: ['iconify', 'blockquote', 'pfp', 'gifs', 'img', 'picture', 'aria-current'],
   },
   vite: {
     vue: {

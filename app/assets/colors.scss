@@ -41,13 +41,13 @@
     --t-pink-text: var(--c-dark-pink);
 }
 
-.light-mode {
-    @include __light;
-}
+// .light-mode {
+//     @include __light;
+// }
 
-.dark-mode {
-    @include __dark;
-}
+// .dark-mode {
+//     @include __dark;
+// }
 
 :root {
     @include __light;
