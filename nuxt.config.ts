@@ -92,7 +92,7 @@ export default defineNuxtConfig({
     aliases: {},
   },
   purgecss: {
-    safelist: ['iconify', 'blockquote', 'pfp', 'gifs'],
+    safelist: ['iconify', 'blockquote', 'pfp', 'gifs', 'img', 'picture'],
   },
   vite: {
     vue: {
