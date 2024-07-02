@@ -6,11 +6,14 @@
             <p>site content CC-BY-4.0</p>
         </div>
         <div id="gifs">
-            <a><img src="/j04q1x.png" alt=""></a>
-            <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank"><img src="/touhou.gif" alt=""></a>
-            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank"><img
-                    src="/firefox4.gif" alt=""></a>
-            <img src="/i-know-her.png" alt="">
+            <NuxtImg src="/j04q1x.png" alt="" />
+            <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank">
+                <NuxtImg src="/touhou.gif" alt="" />
+            </a>
+            <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank">
+                <NuxtImg src="/firefox4.gif" alt="" />
+            </a>
+            <NuxtImg src="/i-know-her.png" alt="" />
         </div>
     </footer>
 </template>

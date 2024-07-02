@@ -4,7 +4,10 @@ definePageMeta({ layout: "blank" });
 
 <template>
     <main class="main vstack">
-        <img src="https://avatars.githubusercontent.com/JakeIsMeh" alt="profile pic" class="pfp" />
+        <NuxtImg src="https://avatars.githubusercontent.com/JakeIsMeh"
+            alt="profile picture: a drawing of a cat lying down on a whale plushie"
+            class="pfp"
+        />
         <div class="spacer"></div>
         <h1>
             <NuxtLink href="/">JakeIsMeh</NuxtLink>
@@ -77,9 +80,9 @@ a.nav-link:focus {
     background-color: var(--t-text);
 }
 
-img.pfp {
-    width: auto;
-    max-height: 16rem;
+picture.pfp {
+    width: 16rem;
+    height: 16rem;
     border: 2px solid;
     border-radius: $radius;
     background-color: var(--t-pink);
