@@ -13,7 +13,7 @@
                 &.diff {
                     &::before {
                         position: absolute;
-                        left: 10px;
+                        // left: $half-spacing-unit;
                     }
     
                     &.remove {
@@ -34,7 +34,7 @@
                 }
     
                 &.highlighted, &.highlight {
-                    background-color: color-mix(in srgb, $grey-600, transparent 50%);
+                    background-color: color-mix(in srgb, $grey-600, transparent 70%);
     
                     &.error {
                         background-color: color-mix(in srgb, $red-550, transparent 60%);
@@ -65,8 +65,8 @@
     
         &.has-focused {
             &>code .line {
-                filter: blur(.1rem);
-                opacity: .4;
+                filter: blur(.125rem);
+                opacity: .6;
                 transition: filter .16s, opacity .16s;
     
                 &.focused {

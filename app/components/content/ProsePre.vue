@@ -70,8 +70,12 @@ const { copy, copied } = useClipboard()
 
     &>pre {
         background: transparent;
-        padding: $quarter-spacing-unit;
+        padding: $quarter-spacing-unit 0;
         margin: 0;
+
+        span.line {
+            padding: $sixteenth-spacing-unit $quarter-spacing-unit;
+        }
     }
 
     .copysnippet {
