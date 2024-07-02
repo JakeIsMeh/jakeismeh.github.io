@@ -2,11 +2,17 @@
 <!-- stolen from https://github.com/nuxt/content/blob/748d1cde42c63367a9131d992c02be2c8994d927/src/runtime/components/ContentRendererMarkdown.vue -->
 
 <template>
-    <MDCRenderer :body="body" :data="data" :tag="tag" :components="mdcComponents" />
+    <Suspense>
+        <MDCRenderer :body="body" :data="data" :tag="tag" :components="mdcComponents" v-bind="$attrs" />
+    </Suspense>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+defineOptions({
+  inheritAttrs: false,
+});
 
 const props = defineProps({
     /**
