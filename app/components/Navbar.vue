@@ -100,7 +100,7 @@ h1 {
 
     @include media-query($on-palm) {
         position: absolute;
-        top: $half-spacing-unit + $quarter-spacing-unit;
+        top: $half-spacing-unit;
         right: $half-spacing-unit;
         background-color: var(--t-bg);
         border: 2px solid var(--t-text);
