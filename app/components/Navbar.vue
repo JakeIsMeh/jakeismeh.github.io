@@ -19,13 +19,14 @@ router.afterEach(() => { checked.value = false; });
             <!-- TODO: redo responsive navbar with focus-within -->
             <input type="checkbox" id="nav-trigger" class="nav-trigger" v-model="checked" />
             <label for="nav-trigger">
-                <Icon name="ph:list-bold" class="menu-icon"/>
+                <Icon name="ph:list-bold" class="menu-icon" />
             </label>
             <div class="trigger">
                 <NuxtLink class="nav-link" href="/about">about</NuxtLink>
                 <NuxtLink class="nav-link" href="/projects">projects
                 </NuxtLink>
-                <NuxtLink class="nav-link" :class="{ active: $route.fullPath.startsWith('/musings') }" href="/musings">musings
+                <NuxtLink class="nav-link" :class="{ active: $route.fullPath.startsWith('/musings') }" href="/musings">
+                    musings
                 </NuxtLink>
             </div>
         </nav>
@@ -80,7 +81,7 @@ h1 {
         font-size: 1.25em;
         color: var(--t-text);
         font-weight: bold;
-        transition: color 0.16s, background-color 0.16s;
+        transition: color .16s, background-color .16s;
         padding: 0 0.25em;
         margin: 0; // reset app.scss margin
 
@@ -124,15 +125,27 @@ h1 {
         }
 
         input~.trigger {
-            min-width: unset;
-            min-height: unset;
+
+            display: block;
             clear: both;
-            display: none;
-            transition: display 200ms;
+            overflow: hidden;
+            max-width: 0;
+            max-height: 0;
+            font-size: 0;
+            transition: max-width .16s, max-height .1s, font-size .16s;
+            float: right;
+            clear: right;
+            visibility: none;
         }
 
+        // values are slightly bigger than measured size.
+        // hardcoded unfortunately bc we can't animate auto with css
         input:checked~.trigger {
-            display: block;
+            transition: max-width .16s, max-height .16s, font-size .16s;
+            font-size: 1em;
+            visibility: visible;
+            max-width: 7.5rem;
+            max-height: 8.5rem;
         }
 
         .nav-link {
