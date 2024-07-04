@@ -3,32 +3,32 @@
 // my own vars
 $header-font-family: 'Manrope', sans-serif;
 $mono-font-family: 'JetBrains Mono', ui-monospace, monospace;
-$radius:         8px;
-$half-radius:    calc($radius/2);
+$radius: 8px;
+$half-radius: calc($radius/2);
 $quarter-radius: calc($radius/4);
 
 // stolen & modified from minima theme for jekyll
 // Define defaults for each variable.
 
 $base-font-family: 'Atkinson Hyperlegible', system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$base-font-size:   1.25rem !default; // 20px
+$base-font-size: 1.25rem !default; // 20px
 $base-font-weight: 400 !default;
-$small-font-size:  0.8em !default;
+$small-font-size: 0.8em !default;
 $base-line-height: 1.3 !default;
 
-$spacing-unit:            32px !default;
-$half-spacing-unit:       calc($spacing-unit/2) !default;
-$quarter-spacing-unit:    calc($spacing-unit/4) !default;
-$eighth-spacing-unit:     calc($spacing-unit/8) !default;
-$sixteenth-spacing-unit:  calc($spacing-unit/16) !default;
+$spacing-unit: 32px !default;
+$half-spacing-unit: calc($spacing-unit/2) !default;
+$quarter-spacing-unit: calc($spacing-unit/4) !default;
+$eighth-spacing-unit: calc($spacing-unit/8) !default;
+$sixteenth-spacing-unit: calc($spacing-unit/16) !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default; // 50rem
+$content-width: 800px !default; // 50rem
 
-$on-palm:          672px !default; // 42rem
-$on-laptop:        800px !default; // 50rem
+$on-palm: 672px !default; // 42rem
+$on-laptop: 800px !default; // 50rem
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -43,3 +43,10 @@ $on-laptop:        800px !default; // 50rem
   }
 }
 
+@mixin transition($args...) {
+  transition: $args;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}

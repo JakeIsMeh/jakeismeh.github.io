@@ -56,7 +56,7 @@ const { copy, copied } = useClipboard()
 .codeblock {
     @extend %shiki;
 
-    transition: color .16s, background-color .16s;
+    @include transition(color .16s, background-color .16s);
     color: var(--t-text);
     position: relative;
     border: 2px solid var(--t-text);

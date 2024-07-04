@@ -5,9 +5,7 @@ definePageMeta({ layout: "blank" });
 <template>
     <main class="main vstack">
         <NuxtImg src="https://avatars.githubusercontent.com/JakeIsMeh"
-            alt="profile picture: a drawing of a cat lying down on a whale plushie"
-            class="pfp"
-        />
+            alt="profile picture: a drawing of a cat lying down on a whale plushie" class="pfp" />
         <div class="spacer"></div>
         <h1>
             <NuxtLink href="/">JakeIsMeh</NuxtLink>
@@ -24,10 +22,12 @@ definePageMeta({ layout: "blank" });
         </p>
         <div class="spacer"></div>
         <p><a href="https://gitlab.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
-                <Icon name="ph:gitlab-logo-simple-bold" />gitlab<IconExtLink />
+                <Icon name="ph:gitlab-logo-simple-bold" />gitlab
+                <IconExtLink />
             </a></p>
         <p><a href="https://github.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
-                <Icon name="ph:github-logo-bold" />github<IconExtLink />
+                <Icon name="ph:github-logo-bold" />github
+                <IconExtLink />
             </a></p>
     </main>
 </template>
@@ -46,7 +46,7 @@ h1>a {
 
     &,
     &:visited {
-        transition: color .16s;
+        @include transition(color .16s);
         color: var(--t-text);
     }
 
@@ -65,12 +65,12 @@ a.nav-link {
     font-size: 1.5em;
     color: var(--t-text);
     line-height: $base-line-height;
-    transition: color .16s, background-color .16s;
+    @include transition(color .16s, background-color .16s);
     padding: 0 .25em;
     margin: 0; // reset margin.scss
 
     .iconify:first-child {
-        margin-right:.2em;
+        margin-right: .2em;
     }
 }
 

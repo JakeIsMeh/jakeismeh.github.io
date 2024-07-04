@@ -14,7 +14,7 @@ html {
         outline-color: transparent;
         outline-style: solid;
         box-shadow: 0 0 0 3px var(--t-pink-bg);
-        transition: box-shadow 0.10s;
+        @include transition(box-shadow 0.10s);
     }
 }
 
@@ -39,12 +39,12 @@ body {
     font-variant-ligatures: normal;
     background-color: var(--t-bg);
     color: var(--t-text);
-    transition: color .16s, background-color .16s;
+    @include transition(color .16s, background-color .16s);
 }
 
 a,
 a:visited {
-    transition: color .16s, background-color .16s;
+    @include transition(color .16s, background-color .16s);
     color: var(--t-pink-text);
     padding: .125em .25em;
     margin: -.125em -.25em;
@@ -66,7 +66,7 @@ a:focus {
 
 blockquote {
     font-size: .8em;
-    transition: color .16s, background-color .16s, border-inline-start .16s;
+    @include transition(color .16s, background-color .16s, border-inline-start .16s);
     padding: $quarter-spacing-unit $half-spacing-unit;
     line-height: 1.5;
     border-inline-start: $radius solid;
@@ -98,141 +98,141 @@ button,
 input[type=reset],
 input[type=submit],
 select {
-    transition: color .16s, background-color .16s;
+    @include transition(color .16s, background-color .16s);
 
-    &:hover {
-        background-color: var(--t-text);
-        color: var(--t-bg);
+        &:hover {
+            background-color: var(--t-text);
+            color: var(--t-bg);
+        }
+
+        &:active {
+            background-color: var(--t-pink-bg);
+            border: 0.0625rem solid var(--t-pink-bg);
+            color: var(--t-text);
+        }
     }
 
-    &:active {
-        background-color: var(--t-pink-bg);
-        border: 0.0625rem solid var(--t-pink-bg);
-        color: var(--t-text);
+
+    ul,
+    ol {
+        padding-left: 1.25em;
     }
-}
 
+    // for markdown content
+    ul.contains-task-list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: $quarter-spacing-unit;
+    }
 
-ul,
-ol {
-    padding-left: 1.25em;
-}
+    code,
+    kbd {
+        font-family: $mono-font-family;
+        font-size: 0.8em;
+    }
 
-// for markdown content
-ul.contains-task-list {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: $quarter-spacing-unit;
-}
+    pre {
+        font-family: $mono-font-family;
+        background-color: var(--t-bg-el1);
+        // overflow: scroll;
+        padding: $half-spacing-unit;
+        // margin: $half-spacing-unit 0;
+        border-radius: $radius;
+    }
 
-code,
-kbd {
-    font-family: $mono-font-family;
-    font-size: 0.8em;
-}
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
 
-pre {
-    font-family: $mono-font-family;
-    background-color: var(--t-bg-el1);
-    // overflow: scroll;
-    padding: $half-spacing-unit;
-    // margin: $half-spacing-unit 0;
-    border-radius: $radius;
-}
+    table {
+        border-collapse: collapse;
+        border-radius: $radius;
 
-img,
-video {
-    max-width: 100%;
-    height: auto;
-}
+        // does not work :(
+        // // hack to get rounded corners
+        // border: hidden;
+        // box-shadow: 0 0 0 0.0625rem var(--t-text);
+    }
 
-table {
-    border-collapse: collapse;
-    border-radius: $radius;
+    small {
+        font-size: $small-font-size;
+    }
 
-    // does not work :(
-    // // hack to get rounded corners
-    // border: hidden;
-    // box-shadow: 0 0 0 0.0625rem var(--t-text);
-}
+    th, td {
+        border: 0.0625rem solid;
+        padding: $quarter-spacing-unit;
+    }
 
-small {
-    font-size: $small-font-size;
-}
+    tr:nth-child(odd) {
+        background-color: var(--t-bg-el1);
+    }
 
-th, td {
-    border: 0.0625rem solid;
-    padding: $quarter-spacing-unit;
-}
+    tr:nth-child(even) {
+        background-color: var(--t-bg-el2);
+    }
 
-tr:nth-child(odd) {
-    background-color: var(--t-bg-el1);
-}
+    thead th:empty {
+        display: none;
+    }
 
-tr:nth-child(even) {
-    background-color: var(--t-bg-el2);
-}
+    .iconify {
+        // background-color: var(--t-text) !important;
+        vertical-align: sub;
+    }
 
-thead th:empty {
-    display: none;
-}
+    a .link-icon {
+        vertical-align: middle;
+        padding: 0;
+        width: .8em;
+        height: .8em;
+        margin-left: 0em;
+    }
 
-.iconify {
-    // background-color: var(--t-text) !important;
-    vertical-align: sub;
-}
+    .hstack {
+        display: flex;
+        flex-direction: row;
+    }
 
-a .link-icon {
-    vertical-align: middle;
-    padding: 0;
-    width: .8em;
-    height: .8em;
-    margin-left: 0em;
-}
+    .vstack {
+        display: flex;
+        flex-direction: column;
+    }
 
-.hstack {
-    display: flex;
-    flex-direction: row;
-}
+    .gap-1 {
+        gap: $quarter-spacing-unit;
+    }
 
-.vstack {
-    display: flex;
-    flex-direction: column;
-}
+    .gap-2 {
+        gap: $half-spacing-unit;
+    }
 
-.gap-1 {
-    gap: $quarter-spacing-unit;
-}
+    .gap-3 {
+        gap: $spacing-unit;
+    }
 
-.gap-2 {
-    gap: $half-spacing-unit;
-}
+    .el1 {
+        background-color: var(--t-bg-el1);
+    }
 
-.gap-3 {
-    gap: $spacing-unit;
-}
+    .el2 {
+        background-color: var(--t-bg-el2);
+    }
 
-.el1 {
-    background-color: var(--t-bg-el1);
-}
+    .devwarn, .devinfo {
+        padding: $quarter-spacing-unit;
+        border-radius: $radius;
+    }
 
-.el2 {
-    background-color: var(--t-bg-el2);
-}
+    .devwarn {
+        background-color: red;
+        color: white;
+    }
 
-.devwarn, .devinfo {
-    padding: $quarter-spacing-unit;
-    border-radius: $radius;
-}
-
-.devwarn {
-    background-color: red;
-    color: white;
-}
-
-.devinfo {
-    background-color: gold;
-    color: black;
-}
+    .devinfo {
+        background-color: gold;
+        color: black;
+    }

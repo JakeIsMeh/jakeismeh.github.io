@@ -11,7 +11,7 @@ const tags_arr = castArray(props.tags);
 
 <style lang="scss">
 #tags > span{
-    transition: color .16s, background-color .16s;
+    @include transition( color .16s, background-color .16s);
     font-size: 1rem;
     border-radius: $half-radius;
     padding: $eighth-spacing-unit $quarter-spacing-unit;

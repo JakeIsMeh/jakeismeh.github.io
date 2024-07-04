@@ -77,7 +77,7 @@
             &>code .line {
                 filter: blur(.125rem);
                 opacity: .6;
-                transition: filter .16s, opacity .16s;
+                @include transition(filter .16s, opacity .16s);
 
                 &.focused {
                     filter: none;
