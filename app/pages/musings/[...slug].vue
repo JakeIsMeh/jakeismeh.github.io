@@ -19,9 +19,7 @@ import { formatDate } from '@vueuse/core';
                 </DevOnly>
             </div>
             <br>
-            <article>
-                <StaticMarkdownRenderer :value="doc" class="vstack gap-2" />
-            </article>
+            <StaticMarkdownRenderer :value="doc" tag="article" class="vstack gap-2" />
             <br>
             <p><NuxtLink to="/musings"><Icon name="ph:arrow-left-bold"/>More musings</NuxtLink></p>
         </template>
