@@ -22,7 +22,7 @@
 footer {
     justify-content: space-between;
     align-content: center;
-    border-top: solid 0.0625rem var(--t-text);
+    border-top: .0625rem solid;
     font-size: 1em;
     padding: $half-spacing-unit 0;
     margin-top: $half-spacing-unit;

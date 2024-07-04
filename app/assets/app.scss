@@ -13,14 +13,13 @@ html {
     &:focus {
         outline-color: transparent;
         outline-style: solid;
-        box-shadow: 0 0 0 3px var(--t-pink-bg);
+        box-shadow: 0 0 0 .125rem var(--t-pink-bg);
         @include transition(box-shadow 0.10s);
     }
 }
 
 ::selection {
     background-color: color-mix(in srgb, var(--t-pink-bg), transparent 70%);
-    // color: color-mix(in srgb, var(--t-pink-bg), currentcolor 80%);
 }
 
 #__nuxt {
@@ -100,139 +99,147 @@ input[type=submit],
 select {
     @include transition(color .16s, background-color .16s);
 
-        &:hover {
-            background-color: var(--t-text);
-            color: var(--t-bg);
-        }
-
-        &:active {
-            background-color: var(--t-pink-bg);
-            border: 0.0625rem solid var(--t-pink-bg);
-            color: var(--t-text);
-        }
+    &:hover {
+        background-color: var(--t-text);
+        color: var(--t-bg);
     }
 
-
-    ul,
-    ol {
-        padding-left: 1.25em;
+    &:active {
+        background-color: var(--t-pink-bg);
+        border: .0625rem solid var(--t-pink-bg);
+        color: var(--t-text);
     }
+}
 
-    // for markdown content
-    ul.contains-task-list {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: $quarter-spacing-unit;
-    }
 
-    code,
-    kbd {
-        font-family: $mono-font-family;
-        font-size: 0.8em;
-    }
+ul,
+ol {
+    padding-left: 1.25em;
+}
 
-    pre {
-        font-family: $mono-font-family;
-        background-color: var(--t-bg-el1);
-        // overflow: scroll;
-        padding: $half-spacing-unit;
-        // margin: $half-spacing-unit 0;
-        border-radius: $radius;
-    }
+// for markdown content
+ul.contains-task-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $quarter-spacing-unit;
+}
 
-    img,
-    video {
-        max-width: 100%;
-        height: auto;
-    }
+code,
+kbd {
+    font-family: $mono-font-family;
+    font-size: 0.8em;
+}
 
-    table {
-        border-collapse: collapse;
-        border-radius: $radius;
+pre {
+    font-family: $mono-font-family;
+    background-color: var(--t-bg-el1);
+    // overflow: scroll;
+    padding: $half-spacing-unit;
+    // margin: $half-spacing-unit 0;
+    border-radius: $radius;
+    border: .0625rem solid;
+}
 
-        // does not work :(
-        // // hack to get rounded corners
-        // border: hidden;
-        // box-shadow: 0 0 0 0.0625rem var(--t-text);
-    }
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
 
-    small {
-        font-size: $small-font-size;
-    }
+table {
+    border-collapse: collapse;
+    border-radius: $radius;
+    border: .0625rem solid;
 
-    th, td {
-        border: 0.0625rem solid;
-        padding: $quarter-spacing-unit;
-    }
+    // does not work :(
+    // // hack to get rounded corners
+    // border: hidden;
+    // box-shadow: 0 0 0 .0625rem solid;
+}
 
-    tr:nth-child(odd) {
-        background-color: var(--t-bg-el1);
-    }
+small {
+    font-size: $small-font-size;
+}
 
-    tr:nth-child(even) {
-        background-color: var(--t-bg-el2);
-    }
+th,
+td {
+    border: .0625rem solid;
+    padding: $quarter-spacing-unit;
+}
 
-    thead th:empty {
-        display: none;
-    }
+tr:nth-child(odd) {
+    background-color: var(--t-bg-el1);
+}
 
-    .iconify {
-        // background-color: var(--t-text) !important;
-        vertical-align: sub;
-    }
+tr:nth-child(even) {
+    background-color: var(--t-bg-el2);
+}
 
-    a .link-icon {
-        vertical-align: middle;
-        padding: 0;
-        width: .8em;
-        height: .8em;
-        margin-left: 0em;
-    }
+thead th:empty {
+    display: none;
+}
 
-    .hstack {
-        display: flex;
-        flex-direction: row;
-    }
+.iconify {
+    // background-color: var(--t-text) !important;
+    vertical-align: sub;
+}
 
-    .vstack {
-        display: flex;
-        flex-direction: column;
-    }
+a .link-icon {
+    vertical-align: middle;
+    padding: 0;
+    width: .8em;
+    height: .8em;
+    margin-left: 0em;
+}
 
-    .gap-1 {
-        gap: $quarter-spacing-unit;
-    }
+.hstack {
+    display: flex;
+    flex-direction: row;
+}
 
-    .gap-2 {
-        gap: $half-spacing-unit;
-    }
+.vstack {
+    display: flex;
+    flex-direction: column;
+}
 
-    .gap-3 {
-        gap: $spacing-unit;
-    }
+.gap-1 {
+    gap: $quarter-spacing-unit;
+}
 
-    .el1 {
-        background-color: var(--t-bg-el1);
-    }
+.gap-2 {
+    gap: $half-spacing-unit;
+}
 
-    .el2 {
-        background-color: var(--t-bg-el2);
-    }
+.gap-3 {
+    gap: $spacing-unit;
+}
 
-    .devwarn, .devinfo {
-        padding: $quarter-spacing-unit;
-        border-radius: $radius;
-    }
+.el1 {
+    background-color: var(--t-bg-el1);
+}
 
-    .devwarn {
-        background-color: red;
-        color: white;
-    }
+.el2 {
+    background-color: var(--t-bg-el2);
+}
 
-    .devinfo {
-        background-color: gold;
-        color: black;
-    }
+.devwarn,
+.devinfo {
+    padding: $quarter-spacing-unit;
+    border-radius: $radius;
+}
+
+.devwarn {
+    background-color: red;
+    color: white;
+}
+
+.devinfo {
+    background-color: gold;
+    color: black;
+}
+
+.katex-display {
+    font-size: $base-font-size; // make sure katex size stays the same no matter the context
+}

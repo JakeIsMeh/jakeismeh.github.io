@@ -56,7 +56,7 @@ h1>a {
 
 .header {
     margin-bottom: $half-spacing-unit;
-    border-bottom: 0.0625rem solid var(--t-text);
+    border-bottom: .0625rem solid;
     padding: $quarter-spacing-unit 0;
 }
 
@@ -104,7 +104,7 @@ h1 {
         top: $half-spacing-unit;
         right: $half-spacing-unit;
         background-color: var(--t-bg);
-        border: 2px solid var(--t-text);
+        border: .0625rem solid;
         border-radius: $radius;
         text-align: right;
         z-index: 1;
@@ -132,7 +132,7 @@ h1 {
             max-width: 0;
             max-height: 0;
             font-size: 0;
-            @include transition(max-width .16s, max-height .1s, font-size .16s);
+            @include transition(max-width .16s, max-height .08s, font-size .16s);
                 float: right;
                 clear: right;
                 visibility: none;
@@ -141,7 +141,6 @@ h1 {
             // values are slightly bigger than measured size.
             // hardcoded unfortunately bc we can't animate auto with css
             input:checked~.trigger {
-                @include transition(max-width .16s, max-height .16s, font-size .16s);
                     font-size: 1em;
                     visibility: visible;
                     max-width: 7.5rem;
