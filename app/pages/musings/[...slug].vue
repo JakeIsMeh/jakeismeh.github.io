@@ -34,4 +34,11 @@ import { formatDate } from '@vueuse/core';
 
 <style lang="scss">
 @import 'katex/dist/katex.css';
+.footnotes {
+    font-size: 0.8em;
+    border: .0625rem solid;
+    border-radius: $radius;
+    background-color: var(--t-bg-el1);
+    padding: $half-spacing-unit;
+}
 </style>
