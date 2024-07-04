@@ -11,7 +11,7 @@
         <pre :class="$props.class"><slot /></pre>
         <div class="codecorner hstack gap-1">
             <span>{{ $props.language }}</span>
-            <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/>
+            <!-- <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/> -->
         </div>
     </div>
 </template>
@@ -44,7 +44,7 @@ const props = defineProps({
     }
 })
 
-const lang_str = JSON.stringify(`     ${props.language}`);
+const lang_str = JSON.stringify(`   ${props.language}`);
 </script>
 
 <style lang="scss">
@@ -103,7 +103,8 @@ const lang_str = JSON.stringify(`     ${props.language}`);
         background-color: var(--t-pink-bg);
         color: var(--t-bg);
         border-radius: $half-radius;
-        padding-left: $eighth-spacing-unit;
+        // padding-left: $eighth-spacing-unit;
+        padding: 0 $eighth-spacing-unit;
     }
 }
 </style>
