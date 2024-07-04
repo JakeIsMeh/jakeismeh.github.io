@@ -11,15 +11,12 @@
         <pre :class="$props.class"><slot /></pre>
         <div class="codecorner hstack gap-1">
             <span>{{ $props.language }}</span>
-            <button @click="copy($props.code ?? '')" class="copysnippet">
-                <Icon :name="copied ? 'ph:check-bold' : 'ph:clipboard-bold'" />
-            </button>
+            <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { useClipboard } from '@vueuse/core';
 const props = defineProps({
     code: {
         type: String,
@@ -48,8 +45,6 @@ const props = defineProps({
 })
 
 const lang_str = JSON.stringify(`     ${props.language}`);
-
-const { copy, copied } = useClipboard()
 </script>
 
 <style lang="scss">
