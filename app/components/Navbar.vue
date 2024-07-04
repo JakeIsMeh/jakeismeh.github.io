@@ -106,13 +106,13 @@ h1 {
         border: 2px solid var(--t-text);
         border-radius: $radius;
         text-align: right;
+        z-index: 1;
 
         label[for='nav-trigger'] {
             display: block;
             float: right;
             width: 2.25rem;
             height: 2.25rem;
-            z-index: 2;
             cursor: pointer;
         }
 
