@@ -59,19 +59,20 @@ const { copy, copied } = useClipboard()
     @include transition(color .16s, background-color .16s);
     color: var(--t-text);
     position: relative;
-    border: 2px solid var(--t-text);
+    border: .0625rem solid;
     border-radius: $radius;
     background-color: var(--t-bg-el1);
 
     .codemeta {
         padding: $quarter-spacing-unit;
-        border-bottom: 0.0625rem solid var(--t-text);
+        border-bottom: .0625rem solid;
     }
 
-    &>pre {
+    pre {
         background: transparent;
         padding: $quarter-spacing-unit 0;
         margin: 0;
+        border: none; // override global `pre` style
 
         span.line {
             padding: $sixteenth-spacing-unit $quarter-spacing-unit;
