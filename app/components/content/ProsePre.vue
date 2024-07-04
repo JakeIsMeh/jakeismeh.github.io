@@ -47,6 +47,8 @@ const props = defineProps({
     }
 })
 
+const lang_str = JSON.stringify(`     ${props.language}`);
+
 const { copy, copied } = useClipboard()
 </script>
 
@@ -73,10 +75,20 @@ const { copy, copied } = useClipboard()
         padding: $quarter-spacing-unit 0;
         margin: 0;
         border: none; // override global `pre` style
+        overflow-x: auto; // scroll if code block is too wide
 
-        span.line {
-            padding: $sixteenth-spacing-unit $quarter-spacing-unit;
+        code {
+            display: block;
+            width: fit-content;
+            min-width: 100%;
+
+            span.line {
+                padding: $sixteenth-spacing-unit $quarter-spacing-unit;
+                display: flex;
+                flex-direction: row;
+            }
         }
+
     }
 
     .copysnippet {
@@ -93,6 +105,18 @@ const { copy, copied } = useClipboard()
         position: absolute;
         top: $quarter-spacing-unit - 2px;
         right: $quarter-spacing-unit - 2px;
+        background-color: var(--t-pink-bg);
+        color: var(--t-bg);
+        border-radius: $radius;
+        padding-left: $quarter-spacing-unit;
     }
+}
+</style>
+
+<style lang="scss" scoped>
+.codeblock>:deep(pre code span.line::after) {
+    content: v-bind(lang_str);
+    display: inline-block;
+    visibility: hidden;
 }
 </style>
