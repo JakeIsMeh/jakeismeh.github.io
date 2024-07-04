@@ -8,12 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@fontsource-variable/manrope':
-        specifier: ^5.0.20
-        version: 5.0.20
-      '@fontsource/atkinson-hyperlegible':
-        specifier: ^5.0.20
-        version: 5.0.20
       '@iconify-json/ph':
         specifier: ^1.1.13
         version: 1.1.13
@@ -816,12 +810,6 @@ packages:
 
   '@floating-ui/utils@0.2.4':
     resolution: {integrity: sha512-dWO2pw8hhi+WrXq1YJy2yCuWoL20PddgGaqTgVe4cOS9Q6qklXCiA1tJEqX6BEwRNSCP84/afac9hd4MS+zEUA==}
-
-  '@fontsource-variable/manrope@5.0.20':
-    resolution: {integrity: sha512-LKL0aM0DxYj8i/zUTb5Nru0mS3YoezPZaeWY7aIxEKVX1xVBLpPHlFq0NoK2iUXhL6HoD0XMYwc6KVa8I/ayKg==}
-
-  '@fontsource/atkinson-hyperlegible@5.0.20':
-    resolution: {integrity: sha512-YczGmDvJ23lheBaEJGNdUDTUwl1uG6xrU1rG+ftOVCdkmOaXtuZI/zq1KW+02d1eGsqKCrtaabHQMrtLjCYQbg==}
 
   '@fortawesome/fontawesome-common-types@6.5.2':
     resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
@@ -5709,10 +5697,6 @@ snapshots:
       '@floating-ui/core': 1.6.4
 
   '@floating-ui/utils@0.2.4': {}
-
-  '@fontsource-variable/manrope@5.0.20': {}
-
-  '@fontsource/atkinson-hyperlegible@5.0.20': {}
 
   '@fortawesome/fontawesome-common-types@6.5.2': {}
 
