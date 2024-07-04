@@ -37,10 +37,12 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
   site: {
     // production URL
     url: 'https://jakeismeh.github.io',
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -48,10 +50,13 @@ export default defineNuxtConfig({
       }
     }
   },
+
   devtools: { enabled: true },
+
   experimental: {
     componentIslands: true,
   },
+
   modules: [
     '@nuxt/content',
     "@nuxt/fonts",
@@ -62,6 +67,7 @@ export default defineNuxtConfig({
     // "nuxt-og-image",
     "nuxt-content-assets",
   ],
+
   content: {
     markdown: {
       remarkPlugins: ['remark-math'],
@@ -78,17 +84,20 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   fonts: {
     priority: ['fontsource', 'bunny', 'google'],
     defaults: {
       subsets: ['latin'],
     }
   },
+
   icon: {
     size: '1em',
     // class: 'icon',
     aliases: {},
   },
+
   vite: {
     vue: {
       template: {
@@ -107,4 +116,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-07-05'
 })
