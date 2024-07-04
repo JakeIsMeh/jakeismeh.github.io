@@ -102,8 +102,8 @@ const lang_str = JSON.stringify(`     ${props.language}`);
         right: $quarter-spacing-unit - 2px;
         background-color: var(--t-pink-bg);
         color: var(--t-bg);
-        border-radius: $radius;
-        padding-left: $quarter-spacing-unit;
+        border-radius: $half-radius;
+        padding-left: $eighth-spacing-unit;
     }
 }
 </style>
