@@ -12,6 +12,13 @@ This is also a sentence.
 This is another sentence that drags on for a bit longer but not too long.
 This is yet another sentence that drags on for a bit longer but now it is getting a bit too long.
 
+_I can't wait for Vapor mode!_  
+__I can't wait for Vapor mode!__  
+___I can't wait for Vapor mode!___  
+*I can't wait for Vapor mode!*  
+**I can't wait for Vapor mode!**  
+***I can't wait for Vapor mode!***  
+
 - abc
 - def
 - ghi
@@ -21,6 +28,22 @@ This is yet another sentence that drags on for a bit longer but now it is gettin
         - stu
     - vwx
       - yz
+
+```swift
+let highScoreThreshold = 1000 // A constant with type Int. The type was inferred based on the provided value.
+
+var currentScore = 980 // A variable with type Int.
+currentScore = 1200 // The value of variables can change over time.
+
+let playerMessage: String // A constant with explicit type String.
+if currentScore > highScoreThreshold {
+    playerMessage = "You are a top player!"
+} else {
+    playerMessage = "Better luck next time."
+}
+
+print(playerMessage) // Prints "You are a top player!"
+```
 
 ```js [file.js]
 export default () => {
@@ -101,10 +124,10 @@ Here's a sentence with a footnote. [^1]
 ##### H5
 ###### H6
 
-[abc](https://abc.xyz)
-# [abc](https://abc.xyz)
-### [abc](https://abc.xyz)
-###### [abc](https://abc.xyz)
+[nuxt is awesome](https://nuxt.com)
+# [nuxt is awesome](https://nuxt.com)
+### [nuxt is awesome](https://nuxt.com)
+###### [nuxt is awesome](https://nuxt.com)
 
 - [x] build website
 - [x] build blog
