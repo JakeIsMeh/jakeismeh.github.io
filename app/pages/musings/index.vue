@@ -52,7 +52,7 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
 
 #posts>* {
     padding: $half-spacing-unit 0;
-    border-bottom: .0625rem solid;
+    border-bottom: .125rem solid;
 }
 
 #posts> :last-of-type {

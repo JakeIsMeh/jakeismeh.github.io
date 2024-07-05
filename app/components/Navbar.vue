@@ -56,7 +56,7 @@ h1>a {
 
 .header {
     margin-bottom: $half-spacing-unit;
-    border-bottom: .0625rem solid;
+    border-bottom: .125rem solid;
     padding: $quarter-spacing-unit 0;
 }
 
@@ -104,7 +104,7 @@ h1 {
         top: $half-spacing-unit;
         right: $half-spacing-unit;
         background-color: var(--t-bg);
-        border: .0625rem solid;
+        border: .125rem solid;
         border-radius: $radius;
         text-align: right;
         z-index: 1;

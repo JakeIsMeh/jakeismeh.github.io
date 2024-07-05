@@ -62,7 +62,7 @@ const lang_str = JSON.stringify(`   ${props.language}`);
 
     .codemeta {
         padding: $quarter-spacing-unit;
-        border-bottom: .0625rem solid;
+        border-bottom: .125rem solid;
     }
 
     pre {

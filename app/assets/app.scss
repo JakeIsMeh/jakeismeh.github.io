@@ -89,7 +89,7 @@ select {
     font: inherit;
     color: var(--t-text);
     background-color: var(--t-bg-el1);
-    border: 0.0625rem solid;
+    border: .125rem solid;
     border-radius: $half-radius;
 }
 
@@ -106,7 +106,7 @@ select {
 
     &:active {
         background-color: var(--t-pink-bg);
-        border: .0625rem solid var(--t-pink-bg);
+        border: .125rem solid var(--t-pink-bg);
         color: var(--t-text);
     }
 }
@@ -139,7 +139,7 @@ pre {
     padding: $half-spacing-unit;
     // margin: $half-spacing-unit 0;
     border-radius: $radius;
-    border: .0625rem solid;
+    border: .125rem solid;
 }
 
 img,
@@ -151,12 +151,12 @@ video {
 table {
     border-collapse: collapse;
     border-radius: $radius;
-    border: .0625rem solid;
+    border: .125rem solid;
 
     // does not work :(
     // // hack to get rounded corners
     // border: hidden;
-    // box-shadow: 0 0 0 .0625rem solid;
+    // box-shadow: 0 0 0 .125rem solid;
 }
 
 small {
@@ -165,7 +165,7 @@ small {
 
 th,
 td {
-    border: .0625rem solid;
+    border: .125rem solid;
     padding: $quarter-spacing-unit;
 }
 
