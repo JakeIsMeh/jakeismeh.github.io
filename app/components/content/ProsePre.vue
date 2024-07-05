@@ -56,7 +56,7 @@ const lang_str = JSON.stringify(`   ${props.language}`);
     @include transition(color .16s, background-color .16s);
     color: var(--t-text);
     position: relative;
-    border: .0625rem solid;
+    border: .125rem solid;
     border-radius: $radius;
     background-color: var(--t-bg-el1);
 
