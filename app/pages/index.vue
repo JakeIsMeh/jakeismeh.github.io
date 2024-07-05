@@ -83,7 +83,7 @@ a.nav-link:focus {
 .pfp {
     width: 16rem;
     height: 16rem;
-    border: .0625rem solid;
+    border: .125rem solid;
     border-radius: $radius;
     background-color: var(--t-pink);
 }
