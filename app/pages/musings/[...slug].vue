@@ -6,7 +6,7 @@ import { formatDate } from '@vueuse/core';
     <ContentDoc :head="false">
         <template v-slot="{ doc }">
             <Title>{{ doc.title }}</Title>
-            <div class="vstack gap-1"> 
+            <div class="vstack gap-1">
                 <h1>{{ doc.title }}</h1>
                 <p v-if="doc.time || doc.date">{{ formatDate(new Date(doc.time ?? doc.date), "DD MMM YYYY") }}</p>
                 <DevOnly v-else>
@@ -21,7 +21,11 @@ import { formatDate } from '@vueuse/core';
             <br>
             <StaticMarkdownRenderer :value="doc" tag="article" class="vstack gap-2" />
             <br>
-            <p><NuxtLink to="/musings"><Icon name="ph:arrow-left-bold"/>More musings</NuxtLink></p>
+            <p>
+                <NuxtLink to="/musings">
+                    <Icon name="ph:arrow-left-bold" />More musings
+                </NuxtLink>
+            </p>
         </template>
         <template #empty>
             <h1>Document is empty</h1>
@@ -34,6 +38,7 @@ import { formatDate } from '@vueuse/core';
 
 <style lang="scss">
 @import 'katex/dist/katex.css';
+
 .footnotes {
     font-size: 0.8em;
     border: .125rem solid;
