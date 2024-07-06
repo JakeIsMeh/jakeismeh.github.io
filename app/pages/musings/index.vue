@@ -22,24 +22,26 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
     <h1>musings</h1>
     <br>
     <main id="posts" class="vstack">
-        <div v-if="data.length > 0" v-for="article in data" class="vstack gap-1">
-            <h2>
-                <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
-            </h2>
-            <span class="hstack gap-1">
-                <template v-if="article.time || article.date">
-                    {{ formatDate(new Date(article.time ?? article.date), "DD MMM YYYY") }}
-                </template>
+        <template v-if="data.length > 0">
+            <div v-for="article in data" class="vstack gap-1">
+                <h2>
+                    <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
+                </h2>
+                <span class="hstack gap-1">
+                    <template v-if="article.time || article.date">
+                        {{ formatDate(new Date(article.time ?? article.date), "DD MMM YYYY") }}
+                    </template>
+                    <DevOnly v-else>
+                        <p class="devwarn">Missing date</p>
+                    </DevOnly>
+                    <Tags :tags="article.tags" />
+                </span>
+                <p v-if="article.subtitle"><small><i>{{ article.subtitle }}</i></small></p>
                 <DevOnly v-else>
-                    <p class="devwarn">Missing date</p>
+                    <p class="devinfo">No subtitle</p>
                 </DevOnly>
-                <Tags :tags="article.tags" />
-            </span>
-            <p v-if="article.subtitle"><small><i>{{ article.subtitle }}</i></small></p>
-            <DevOnly v-else>
-                <p class="devinfo">No subtitle</p>
-            </DevOnly>
-        </div>
+            </div>
+        </template>
         <p v-else>come back soon :)</p>
     </main>
 </template>
