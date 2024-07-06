@@ -243,3 +243,17 @@ a .link-icon {
 .katex-display {
     font-size: $base-font-size; // make sure katex size stays the same no matter the context
 }
+
+// heading-anchor
+.h-anc {
+    font-size: 0.8em;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    margin-left: $quarter-spacing-unit;
+
+    &:hover,
+    &:focus {
+        padding: 0;
+    }
+}

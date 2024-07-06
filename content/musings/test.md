@@ -126,7 +126,9 @@ Here's a sentence with a footnote. [^1]
 
 [nuxt is awesome](https://nuxt.com)
 # [nuxt is awesome](https://nuxt.com)
+## [nuxt is awesome](https://nuxt.com)
 ### [nuxt is awesome](https://nuxt.com)
+#### [nuxt is awesome](https://nuxt.com)
 ###### [nuxt is awesome](https://nuxt.com)
 
 - [x] build website
