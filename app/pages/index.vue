@@ -22,12 +22,10 @@ definePageMeta({ layout: "blank" });
         </p>
         <div class="spacer"></div>
         <p><a href="https://gitlab.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
-                <Icon name="ph:gitlab-logo-simple-bold" />gitlab
-                <IconExtLink />
+                <Icon name="ph:gitlab-logo-simple-bold" />gitlab<IconExtLink />
             </a></p>
         <p><a href="https://github.com/JakeIsMeh" class="nav-link" target="_blank" rel="nofollow">
-                <Icon name="ph:github-logo-bold" />github
-                <IconExtLink />
+                <Icon name="ph:github-logo-bold" />github<IconExtLink />
             </a></p>
     </main>
 </template>
