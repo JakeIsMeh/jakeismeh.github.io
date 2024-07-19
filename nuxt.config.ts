@@ -38,13 +38,6 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  // workaround for bug in @nuxt/content 2.13.1
-  nitro: {
-    prerender: {
-      routes: ['/'],
-    },
-  },
-
   site: {
     // production URL
     url: 'https://jakeismeh.github.io',
