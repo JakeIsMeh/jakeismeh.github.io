@@ -81,10 +81,10 @@ h1 {
         font-size: 1.25em;
         color: var(--t-text);
         font-weight: bold;
-        @include transition(color .16s, background-color .16s);
         padding: 0 0.25em;
         margin: 0; // reset app.scss margin
-
+        @include transition(color .16s, background-color .16s);
+        
         &:hover,
         &:focus,
         &.active,
@@ -132,30 +132,32 @@ h1 {
             max-width: 0;
             max-height: 0;
             font-size: 0;
+            float: right;
+            clear: right;
+            visibility: none;
+            
             @include transition(max-width .16s, max-height .08s, font-size .16s);
-                float: right;
-                clear: right;
-                visibility: none;
-            }
+        }
 
-            // values are slightly bigger than measured size.
-            // hardcoded unfortunately bc we can't animate auto with css
-            input:checked~.trigger {
-                    font-size: 1em;
-                    visibility: visible;
-                    max-width: 7.5rem;
-                    max-height: 8.5rem;
-                }
+        // values are slightly bigger than measured size.
+        // hardcoded unfortunately bc we can't animate auto with css
+        input:checked~.trigger {
+            font-size: 1em;
+            visibility: visible;
+            max-width: 7.5rem;
+            max-height: 8.5rem;
+        }
 
-                .nav-link {
-                    display: block;
-                    padding: 5px 10px;
-                    border-radius: 0;
-                }
+        .nav-link {
+            display: block;
+            padding: 5px 10px;
+            border-radius: 0;
+        }
 
-                a:last-of-type {
-                    border-radius: 0 0 ($radius - 3px) ($radius - 3px);
-                }
+        a:last-of-type {
+            border-radius: 0 0 ($radius - 3px) ($radius - 3px);
+        }
 
-            }
-        }</style>
+    }
+}
+</style>
