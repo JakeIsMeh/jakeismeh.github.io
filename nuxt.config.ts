@@ -93,6 +93,7 @@ export default defineNuxtConfig({
   },
 
   icon: {
+    provider: 'iconify',
     size: '1em',
     // class: 'icon',
     aliases: {},
