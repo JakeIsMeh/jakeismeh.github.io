@@ -6,6 +6,9 @@
 
         // css styles for shiki
         &.shiki>code {
+            counter-reset: step;
+            counter-increment: step calc(var(--start, 1) - 1);
+
             &>span {
                 display: block;
             }
@@ -19,15 +22,23 @@
                     }
                 }
 
+                &::before {
+                    content: counter(step);
+                    counter-increment: step;
+                    width: 2.5rem;
+                    padding-right: $quarter-spacing-unit;
+                    display: inline-block;
+                    text-align: right;
+                    color: color-mix(in srgb, var(--t-text), transparent 50%);
+                    border-right: 0.125em solid color-mix(in srgb, var(--t-text), transparent 50%);
+                    margin-right: $quarter-spacing-unit;
+                }
+
                 &.diff {
-                    &::before {
-                        position: absolute;
-                        // left: $half-spacing-unit;
-                    }
 
                     &.remove {
                         &::before {
-                            content: "-";
+                            content: "- " counter(step);
                         }
 
                         background-color: color-mix(in srgb, $red-550, transparent 60%);
@@ -35,7 +46,7 @@
 
                     &.add {
                         &::before {
-                            content: "+";
+                            content:  "+ " counter(step);
                         }
 
                         background-color: color-mix(in srgb, $jade-450, transparent 60%);
@@ -44,14 +55,14 @@
 
                 &.highlighted,
                 &.highlight {
-                    background-color: color-mix(in srgb, $grey-600, transparent 70%);
+                    background-color: color-mix(in srgb, $grey-500, transparent 70%);
 
                     &.error {
                         background-color: color-mix(in srgb, $red-550, transparent 60%);
                     }
 
                     &.warning {
-                        background-color: color-mix(in srgb, $amber-450, transparent 50%);
+                        background-color: color-mix(in srgb, $amber-450, transparent 60%);
                     }
                 }
 

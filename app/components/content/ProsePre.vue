@@ -76,9 +76,9 @@ const lang_str = JSON.stringify(`   ${props.language}`);
             display: block;
             width: fit-content;
             min-width: 100%;
+            line-height: 1.6;
 
             span.line {
-                padding: $sixteenth-spacing-unit $quarter-spacing-unit;
                 display: flex;
                 flex-direction: row;
             }
