@@ -82,7 +82,7 @@ a.nav-link:focus {
     width: 16rem;
     height: 16rem;
     border: .125rem solid;
-    border-radius: $radius;
+    // border-radius: $radius;
     background-color: var(--t-pink);
 }
 </style>

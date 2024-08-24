@@ -57,7 +57,7 @@ const lang_str = JSON.stringify(`   ${props.language}`);
     color: var(--t-text);
     position: relative;
     border: .125rem solid;
-    border-radius: $radius;
+    // border-radius: $radius;
     background-color: var(--t-bg-el1);
 
     .codemeta {
@@ -95,6 +95,10 @@ const lang_str = JSON.stringify(`   ${props.language}`);
         width: fit-content;
     }
 
+    span+.copysnippet {
+        // border-radius: 0 $half-radius $half-radius 0;
+    }
+
     .codecorner {
         user-select: none;
         position: absolute;
@@ -102,9 +106,7 @@ const lang_str = JSON.stringify(`   ${props.language}`);
         right: $quarter-spacing-unit - 2px;
         background-color: var(--t-pink-bg);
         color: var(--t-bg);
-        border-radius: $half-radius;
-        // padding-left: $eighth-spacing-unit;
-        padding: 0 $eighth-spacing-unit;
+        // border-radius: $half-radius;
     }
 }
 </style>

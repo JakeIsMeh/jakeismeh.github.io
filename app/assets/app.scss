@@ -47,7 +47,7 @@ a:visited {
     color: var(--t-pink-text);
     padding: .125em .25em;
     margin: -.125em -.25em;
-    border-radius: $radius;
+    // border-radius: $radius;
 }
 
 a:hover,
@@ -70,7 +70,7 @@ blockquote {
     line-height: 1.5;
     border-inline-start: $radius solid;
     background-color: var(--t-bg-el1);
-    border-radius: $radius;
+    // border-radius: $radius;
 }
 
 h1,
@@ -90,7 +90,7 @@ select {
     color: var(--t-text);
     background-color: var(--t-bg-el1);
     border: .125rem solid;
-    border-radius: $half-radius;
+    // border-radius: $half-radius;
 }
 
 button,
@@ -138,7 +138,7 @@ pre {
     // overflow: scroll;
     padding: $half-spacing-unit;
     // margin: $half-spacing-unit 0;
-    border-radius: $radius;
+    // border-radius: $radius;
     border: .125rem solid;
 }
 
@@ -150,7 +150,7 @@ video {
 
 table {
     border-collapse: collapse;
-    border-radius: $radius;
+    // border-radius: $radius;
     border: .125rem solid;
 
     // does not work :(
@@ -227,7 +227,7 @@ a .link-icon {
 .devwarn,
 .devinfo {
     padding: $quarter-spacing-unit;
-    border-radius: $radius;
+    // border-radius: $radius;
 }
 
 .devwarn {

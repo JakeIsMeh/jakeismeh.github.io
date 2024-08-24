@@ -13,7 +13,7 @@ const tags_arr = castArray(props.tags);
 #tags > span{
     @include transition(color .16s, background-color .16s);
     font-size: 1rem;
-    border-radius: $half-radius;
+    // border-radius: $half-radius;
     padding: $eighth-spacing-unit $quarter-spacing-unit;
     color: var(--t-bg);
     background-color: var(--t-text);

@@ -105,7 +105,7 @@ h1 {
         right: $half-spacing-unit;
         background-color: var(--t-bg);
         border: .125rem solid;
-        border-radius: $radius;
+        // border-radius: $radius;
         text-align: right;
         z-index: 1;
 
@@ -151,12 +151,12 @@ h1 {
         .nav-link {
             display: block;
             padding: 5px 10px;
-            border-radius: 0;
+            // border-radius: 0;
         }
 
-        a:last-of-type {
-            border-radius: 0 0 ($radius - 3px) ($radius - 3px);
-        }
+        // a:last-of-type {
+        //     border-radius: 0 0 ($radius - 3px) ($radius - 3px);
+        // }
 
     }
 }
