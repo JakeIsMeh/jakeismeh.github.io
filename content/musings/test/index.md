@@ -159,9 +159,18 @@ Here's a sentence with a footnote. [^1]
 - [x] build blog
 - [ ] ship it
 
+<details open>
+<summary>Shopping list</summary>
+
+* Vegetables
+* Fruits
+* Fish
+
+</details>
+
 :heart: :sob: :scream:
 
 ![img](./media/img.png)
 
-:video{src="./media/2024-07-05 17-56-57.mp4" controls="true"}
-<!-- :img{src="img.png"} -->
+:video{src="./media/bwaaa.mp4" controls="true"}
+<!-- :img{src="./media/img.png"} -->
