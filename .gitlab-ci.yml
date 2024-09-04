@@ -1,0 +1,30 @@
+pages:
+  image: node
+
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest-9 --activate
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install --frozen-lockfile
+
+  script:
+    - pnpm run build --preset github_pages
+
+  after_script:
+    - pnpm store prune
+
+  cache:
+    key:
+        files:
+        - pnpm-lock.yaml
+    paths:
+        - .pnpm-store/
+
+  artifacts:
+    paths:
+      - .output/public
+
+  publish: .output/public
+
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
