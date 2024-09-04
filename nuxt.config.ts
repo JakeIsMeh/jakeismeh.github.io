@@ -68,6 +68,7 @@ export default defineNuxtConfig({
     //   selectiveClient: 'deep',
     // },
     componentIslands: true,
+    buildCache: true,
     defaults: {
       nuxtLink: {
         prefetch: true,
@@ -78,7 +79,6 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/fonts",
-    'nuxt-build-cache',
     '@nuxt/image',
     '@nuxt/icon',
     "@nuxtjs/critters",
