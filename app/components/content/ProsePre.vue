@@ -8,9 +8,9 @@
         <div class="codemeta" v-if="filename">
             <span><small>{{ $props.filename }}</small></span>
         </div>
-        <pre :class="$props.class"><slot /></pre>
-        <div class="codecorner hstack gap-1">
-            <span>{{ $props.language }}</span>
+        <pre :class="[$props.class, { 'codepad': !$props.language }]" :start="meta?.start"><slot /></pre>
+        <div class="codecorner hstack gap-0">
+            <span v-if="$props.language && $props.language !== 'txt'">{{ $props.language }}</span>
             <!-- <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/> -->
         </div>
     </div>
@@ -44,7 +44,10 @@ const props = defineProps({
     }
 })
 
-const lang_str = JSON.stringify(`   ${props.language}`);
+const meta = computed(() => {
+    return props.meta ? JSON.parse(props.meta) : undefined;
+})
+const lang_str = JSON.stringify(`     ${props.language}`);
 </script>
 
 <style lang="scss">
@@ -63,6 +66,10 @@ const lang_str = JSON.stringify(`   ${props.language}`);
     .codemeta {
         padding: $quarter-spacing-unit;
         border-bottom: .125rem solid;
+    }
+
+    .codepad {
+        padding: $quarter-spacing-unit;
     }
 
     pre {
@@ -107,6 +114,10 @@ const lang_str = JSON.stringify(`   ${props.language}`);
         background-color: var(--t-pink-bg);
         color: var(--t-bg);
         // border-radius: $half-radius;
+        > span {
+            padding: 0 $eighth-spacing-unit;
+            align-content: center;
+        }
     }
 }
 </style>

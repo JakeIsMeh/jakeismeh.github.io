@@ -120,7 +120,7 @@ h1 {
         .menu-icon {
             display: block;
             padding: 5px;
-            margin: 3px;
+            margin: 4px;
             fill: currentColor;
         }
 

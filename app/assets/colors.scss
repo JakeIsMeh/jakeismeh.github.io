@@ -15,12 +15,14 @@
     --c-light-bg-el2: #{$fuchsia-100};
     // --c-light-text: #{$fuchsia-950};
     --c-light-text: #{$black};
-    --c-light-pink: #{$pink-450};
-    --c-dark-bg: #{$pink-950};
-    --c-dark-bg-el1: #{$pink-900};
-    --c-dark-bg-el2:#{$pink-850};
-    --c-dark-text: #{$pink-100};
-    --c-dark-pink: #{$pink-450};
+    // --c-light-pink: #{$pink-450};
+    --c-light-pink: #ff0060;
+    --c-dark-bg: #{$zinc-950};
+    --c-dark-bg-el1: #{$zinc-900};
+    --c-dark-bg-el2:#{$zinc-850};
+    --c-dark-text: #{$pink-50};
+    // --c-dark-pink: #{$pink-450};
+    --c-dark-pink: #FF4090;
 }
 
 @mixin __light {

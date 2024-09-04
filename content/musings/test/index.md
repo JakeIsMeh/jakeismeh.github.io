@@ -7,6 +7,8 @@ tags: ["testing", "hello"]
 date: "1999-06-10"
 ---
 
+# Testing
+
 This is a sentence.
 This is also a sentence.
 This is another sentence that drags on for a bit longer but not too long.
@@ -63,7 +65,7 @@ console.error('Error') // [!code error]
 console.warn('Warning') // [!code warning]
 ```
 
-```js {1,3-4}
+```js {1,3-4} {"start":13}
 console.log('1')
 console.log('2')
 console.log('3')
@@ -79,6 +81,18 @@ int main(int argc, char* argv[]) {
     return 1; // [!code warning]
 }
 ```
+```txt
+Sparkle in the Twilight
+Shimmer in the Sunset
+```
+```
+The code glows bright on the display tonight
+Not a culprit to be seen
+A stack trace of desperation
+And it looks like it’s on me
+
+- Asahi Lina
+```
 
 ```cpp
  
@@ -90,6 +104,9 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 > testing a b c  
 > testing a b c  
 > testing a b c  
+
+> foo
+> bar
 
 > Lift($$L$$) can be determined by Lift Coefficient ($$C_L$$) like the following
 > equation.
@@ -124,15 +141,27 @@ Here's a sentence with a footnote. [^1]
 ##### H5
 ###### H6
 
-[nuxt is awesome](https://nuxt.com)
-# [nuxt is awesome](https://nuxt.com)
-## [nuxt is awesome](https://nuxt.com)
-### [nuxt is awesome](https://nuxt.com)
-#### [nuxt is awesome](https://nuxt.com)
-###### [nuxt is awesome](https://nuxt.com)
+# H1 `monospace` text
+## H2 `monospace` text
+### H3 `monospace` text
+#### H4 `monospace` text
+##### H5 `monospace` text
+###### H6 `monospace` text
+
+[`nuxt` is awesome](https://nuxt.com)
+# [`nuxt` is awesome](https://nuxt.com)
+## [`nuxt` is awesome](https://nuxt.com)
+### [`nuxt` is awesome](https://nuxt.com)
+#### [`nuxt` is awesome](https://nuxt.com)
+###### [`nuxt` is awesome](https://nuxt.com)
 
 - [x] build website
 - [x] build blog
 - [ ] ship it
 
 :heart: :sob: :scream:
+
+![img](./media/img.png)
+
+:video{src="./media/2024-07-05 17-56-57.mp4" controls="true"}
+<!-- :img{src="img.png"} -->

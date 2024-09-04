@@ -3,11 +3,12 @@
 
 %shiki {
     &>pre {
+        counter-reset: loc;
+        // TODO: doesn't work for some reason :sob:
+        counter-increment: loc calc(attr(start number, 1) - 1);
 
         // css styles for shiki
         &.shiki>code {
-            counter-reset: step;
-            counter-increment: step calc(var(--start, 1) - 1);
 
             &>span {
                 display: block;
@@ -23,8 +24,8 @@
                 }
 
                 &::before {
-                    content: counter(step);
-                    counter-increment: step;
+                    content: counter(loc);
+                    counter-increment: loc;
                     width: 2.5rem;
                     padding-right: $quarter-spacing-unit;
                     display: inline-block;
@@ -38,7 +39,7 @@
 
                     &.remove {
                         &::before {
-                            content: "- " counter(step);
+                            content: "- " counter(loc);
                         }
 
                         background-color: color-mix(in srgb, $red-550, transparent 60%);
@@ -46,7 +47,7 @@
 
                     &.add {
                         &::before {
-                            content:  "+ " counter(step);
+                            content:  "+ " counter(loc);
                         }
 
                         background-color: color-mix(in srgb, $jade-450, transparent 60%);

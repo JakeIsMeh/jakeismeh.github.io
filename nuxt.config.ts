@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import path from 'path';
+
 const katex_tags = [
   'Math',
   'Annotation',
@@ -38,6 +40,10 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
+  extends: [
+    'node_modules/nuxt-content-assets/cache',
+  ],
+
   site: {
     // production URL
     url: 'https://jakeismeh.github.io',
@@ -51,14 +57,26 @@ export default defineNuxtConfig({
     }
   },
 
+  contentAssets: {
+    debug: true,
+  },
+
   devtools: { enabled: true },
 
   experimental: {
+    // componentIslands: {
+    //   selectiveClient: 'deep',
+    // },
     componentIslands: true,
+    defaults: {
+      nuxtLink: {
+        prefetch: true,
+        prefetchOn: { visibility: false, interaction: true },
+      }
+    }
   },
 
   modules: [
-    '@nuxt/content',
     "@nuxt/fonts",
     'nuxt-build-cache',
     '@nuxt/image',
@@ -66,21 +84,23 @@ export default defineNuxtConfig({
     "@nuxtjs/critters",
     // "nuxt-og-image",
     "nuxt-content-assets",
+    '@nuxt/content',
   ],
 
   content: {
     markdown: {
       remarkPlugins: ['remark-math'],
       rehypePlugins: ['rehype-katex'],
+      anchorLinks: { depth: 3, exclude: [] }
     },
     highlight: {
       theme: {
-        default: 'min-light',
+        default: 'light-plus',
         d: 'monokai',
       },
       langs: [
         'js', 'jsx', 'json', 'ts', 'tsx', 'vue', 'css', 'html', 'vue', 'bash', 'md', 'mdc', 'yaml',
-        'c', 'cpp', 'csharp',
+        'c', 'cpp', 'csharp', 'swift',
       ],
     },
   },
@@ -93,7 +113,7 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    provider: 'iconify',
+    // provider: 'iconify',
     size: '1em',
     // class: 'icon',
     aliases: {},

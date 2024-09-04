@@ -11,7 +11,7 @@
 import { computed } from 'vue'
 
 defineOptions({
-  inheritAttrs: false,
+    inheritAttrs: false,
 });
 
 const props = defineProps({
@@ -75,3 +75,41 @@ const mdcComponents = computed(() => {
     }
 })
 </script>
+
+<style lang="scss" scoped>
+:deep() {
+
+    :not(div:first-child) {
+        // TODO: fix padding being applied on footnote header
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding-top: $half-spacing-unit;
+        }
+    }
+
+    .footnotes {
+        font-size: 0.85em;
+        border: .125rem solid;
+        // border-radius: $radius;
+        background-color: var(--t-bg-el1);
+        padding: $half-spacing-unit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-bottom: $eighth-spacing-unit;
+    }
+}
+</style>
+
+<style lang="scss">
+@import 'katex/dist/katex.css';
+</style>
