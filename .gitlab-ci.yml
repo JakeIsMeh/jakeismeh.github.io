@@ -8,7 +8,7 @@ pages:
     - pnpm install --frozen-lockfile
 
   script:
-    - pnpm run build --preset github_pages
+    - pnpm run build --preset gitlab_pages
 
   after_script:
     - pnpm store prune
