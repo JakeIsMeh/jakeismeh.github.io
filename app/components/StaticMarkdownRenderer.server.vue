@@ -80,7 +80,6 @@ const mdcComponents = computed(() => {
 :deep() {
 
     :not(div:first-child) {
-        // TODO: fix padding being applied on footnote header
         h1,
         h2,
         h3,
@@ -97,6 +96,10 @@ const mdcComponents = computed(() => {
         // border-radius: $radius;
         background-color: var(--t-bg-el1);
         padding: $half-spacing-unit;
+
+        h2:first-child {
+            padding-top: 0;
+        }
     }
 
     h1,
