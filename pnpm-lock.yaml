@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@nuxtjs/mdc':
-    hash: cop4giaoi2efjnxjj67hw4cifm
+    hash: hbkiip22bgrfk3lx64ro6q7kym
     path: patches/@nuxtjs__mdc.patch
   nuxt-content-assets:
     hash: wszk2f4p4sf3jvszhyvqt7cxmq
@@ -5008,7 +5008,7 @@ snapshots:
   '@nuxt/content@2.13.2(ioredis@5.4.1)(magicast@0.3.5)(nuxt@3.13.2(@parcel/watcher@2.4.1)(@types/node@22.5.5)(encoding@0.1.13)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.22.4)(sass-embedded@1.79.3)(sass@1.79.3)(terser@5.33.0)(vite@5.4.7(@types/node@22.5.5)(sass-embedded@1.79.3)(sass@1.79.3)(terser@5.33.0))(webpack-sources@3.2.3))(rollup@4.22.4)(vue@3.5.8)(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.22.4)(webpack-sources@3.2.3)
-      '@nuxtjs/mdc': 0.8.3(patch_hash=cop4giaoi2efjnxjj67hw4cifm)(magicast@0.3.5)(rollup@4.22.4)(webpack-sources@3.2.3)
+      '@nuxtjs/mdc': 0.8.3(patch_hash=hbkiip22bgrfk3lx64ro6q7kym)(magicast@0.3.5)(rollup@4.22.4)(webpack-sources@3.2.3)
       '@vueuse/core': 10.11.1(vue@3.5.8)
       '@vueuse/head': 2.0.0(vue@3.5.8)
       '@vueuse/nuxt': 10.11.1(magicast@0.3.5)(nuxt@3.13.2(@parcel/watcher@2.4.1)(@types/node@22.5.5)(encoding@0.1.13)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.22.4)(sass-embedded@1.79.3)(sass@1.79.3)(terser@5.33.0)(vite@5.4.7(@types/node@22.5.5)(sass-embedded@1.79.3)(sass@1.79.3)(terser@5.33.0))(webpack-sources@3.2.3))(rollup@4.22.4)(vue@3.5.8)(webpack-sources@3.2.3)
@@ -5425,7 +5425,7 @@ snapshots:
       - supports-color
       - webpack-sources
 
-  '@nuxtjs/mdc@0.8.3(patch_hash=cop4giaoi2efjnxjj67hw4cifm)(magicast@0.3.5)(rollup@4.22.4)(webpack-sources@3.2.3)':
+  '@nuxtjs/mdc@0.8.3(patch_hash=hbkiip22bgrfk3lx64ro6q7kym)(magicast@0.3.5)(rollup@4.22.4)(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.22.4)(webpack-sources@3.2.3)
       '@shikijs/transformers': 1.18.0
