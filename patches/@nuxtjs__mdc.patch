@@ -1,0 +1,37 @@
+diff --git a/dist/runtime/parser/utils/html-tags-list.js b/dist/runtime/parser/utils/html-tags-list.js
+index f8e905552787d0341d6aaedf5886a662eab28914..f56afcf73664565dfc4025184c78bd036e999c51 100644
+--- a/dist/runtime/parser/utils/html-tags-list.js
++++ b/dist/runtime/parser/utils/html-tags-list.js
+@@ -115,5 +115,31 @@ export default [
+   "ul",
+   "var",
+   "video",
+-  "wbr"
++  "wbr",
++  'annotation',
++  'semantics',
++  'mtext',
++  'mn',
++  'mo',
++  'mi',
++  'mspace',
++  'mover',
++  'munder',
++  'munderover',
++  'msup',
++  'msub',
++  'msubsup',
++  'mfrac',
++  'mroot',
++  'msqrt',
++  'mtable',
++  'mtr',
++  'mtd',
++  'mlabeledtr',
++  'mrow',
++  'menclose',
++  'mstyle',
++  'mpadded',
++  'mphantom',
++  'mglyph'
+ ];

@@ -1,40 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import path from 'path';
-
-const katex_tags = [
-  'Math',
-  'Annotation',
-  'Semantics',
-  'Mtext',
-  'Mn',
-  'Mo',
-  'Mi',
-  'Mspace',
-  'Mover',
-  'Munder',
-  'Munderover',
-  'Msup',
-  'Msub',
-  'Msubsup',
-  'Mfrac',
-  'Mroot',
-  'Msqrt',
-  'Mtable',
-  'Mtr',
-  'Mtd',
-  'Mlabeledtr',
-  'Mrow',
-  'Menclose',
-  'Mstyle',
-  'Mpadded',
-  'Mphantom',
-  'Mglyph',
-  'Svg',
-  'Line',
-  'Path'
-];
-
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
@@ -64,10 +29,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   experimental: {
-    // componentIslands: {
-    //   selectiveClient: 'deep',
-    // },
-    componentIslands: true,
+    componentIslands: {
+      selectiveClient: true,
+    },
+    // componentIslands: true,
     buildCache: true,
     defaults: {
       nuxtLink: {
@@ -124,7 +89,6 @@ export default defineNuxtConfig({
       template: {
         compilerOptions: {
           whitespace: 'condense',
-          isCustomElement: (tag) => katex_tags.includes(tag),
         },
       },
     },
@@ -132,6 +96,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          api: 'modern-compiler',
           additionalData: '@use "@/assets/variables.scss" as *;@use "@picocss/pico/scss/colors" as *;',
         },
       },
