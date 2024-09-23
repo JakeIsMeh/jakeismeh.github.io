@@ -96,6 +96,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          silenceDeprecations: ['mixed-decls'],
           api: 'modern-compiler',
           additionalData: '@use "@/assets/variables.scss" as *;@use "@picocss/pico/scss/colors" as *;',
         },
