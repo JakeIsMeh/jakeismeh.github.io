@@ -69,6 +69,9 @@ export default defineNuxtConfig({
     markdown: {
       remarkPlugins: ['remark-math'],
       rehypePlugins: ['rehype-katex'],
+      rehypeOptions: {
+        clobberPrefix: '',
+      },
     },
     highlight: {
       theme: {

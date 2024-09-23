@@ -34,7 +34,8 @@
   "pnpm": {
     "patchedDependencies": {
       "nuxt-content-assets": "patches/nuxt-content-assets.patch",
-      "@nuxtjs/mdc": "patches/@nuxtjs__mdc.patch"
+      "@nuxtjs/mdc": "patches/@nuxtjs__mdc.patch",
+      "@nuxt/content": "patches/@nuxt__content.patch"
     }
   }
 }

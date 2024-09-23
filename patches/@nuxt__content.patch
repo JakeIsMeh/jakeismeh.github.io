@@ -1,0 +1,14 @@
+diff --git a/dist/runtime/transformers/markdown.js b/dist/runtime/transformers/markdown.js
+index b1a50be89d301ab85e6dfa1fa91671fa8bfe7c08..5d2a22ea936e6507e8298a09bb8c4e58f54b5209 100644
+--- a/dist/runtime/transformers/markdown.js
++++ b/dist/runtime/transformers/markdown.js
+@@ -25,7 +25,8 @@ export default defineTransformer({
+         options: {
+           handlers: {
+             link
+-          }
++          },
++          ...config.rehypeOptions,
+         },
+         plugins: config.rehypePlugins
+       },
