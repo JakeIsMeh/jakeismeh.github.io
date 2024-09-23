@@ -97,6 +97,11 @@ const mdcComponents = computed(() => {
         background-color: var(--t-bg-el1);
         padding: $half-spacing-unit;
 
+        a[data-footnote-backref] {
+            padding-left: $quarter-spacing-unit;
+            font-family: initial;
+        }
+
         h2:first-child {
             padding-top: 0;
         }
