@@ -52,11 +52,23 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
 
+  mdc: {
+    headings: {
+      anchorLinks: {
+        h1: true,
+        h2: true,
+        h3: true,
+        h4: false,
+        h5: false,
+        h6: false
+      }
+    },
+  },
+
   content: {
     markdown: {
       remarkPlugins: ['remark-math'],
       rehypePlugins: ['rehype-katex'],
-      anchorLinks: { depth: 3, exclude: [] }
     },
     highlight: {
       theme: {
