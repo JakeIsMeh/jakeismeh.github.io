@@ -2,10 +2,14 @@
 import { formatDate } from '@vueuse/core';
 
 const { data, pending, error, refresh } = await useAsyncData('musings', () => {
-    return queryContent('musings')
+    let q = queryContent('musings')
         .only(['_path', 'title', 'subtitle', 'date', 'time', 'tags'])
-        .where({"title": { $ne: "Test"}})
-        .sort({
+
+        if (!import.meta.dev) {
+            q = q.where({"title": { $ne: "Test"}})
+        }
+        
+        q = q.sort({
             tags: 1,
             subtitle: 1,
             title: 1,
@@ -13,6 +17,8 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
             time: -1,
         })
         .find()
+
+    return q;
 })
 
 </script>
@@ -27,10 +33,10 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
                 <h2>
                     <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
                 </h2>
-                <span class="hstack gap-1">
-                    <template v-if="article.time || article.date">
+                <span class="hstack gap-1 f-ai-bl">
+                    <span v-if="article.time || article.date">
                         {{ formatDate(new Date(article.time ?? article.date), "DD MMM YYYY") }}
-                    </template>
+                    </span>
                     <DevOnly v-else>
                         <p class="devwarn">Missing date</p>
                     </DevOnly>
