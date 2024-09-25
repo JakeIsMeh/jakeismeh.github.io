@@ -98,7 +98,7 @@ const mdcComponents = computed(() => {
         padding: $half-spacing-unit;
 
         a[data-footnote-backref] {
-            margin-left: $quarter-spacing-unit;
+            margin-left: $sixteenth-spacing-unit;
             font-family: initial;
         }
 

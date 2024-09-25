@@ -204,6 +204,16 @@ a .link-icon {
     flex-direction: column;
 }
 
+// flexbox align-items center
+.f-ai-c {
+    align-items: center;
+}
+
+// flexbox align-items baseline
+.f-ai-bl {
+    align-items: baseline;
+}
+
 .gap-0 {
     gap: $eighth-spacing-unit;
 }
