@@ -6,7 +6,9 @@
             <p>site content CC-BY-4.0</p>
         </div>
         <div id="gifs">
-            <NuxtImg src="/j04q1x.png" alt="" />
+            <a href="https://en.wikipedia.org/wiki/Cohost">
+                <NuxtImg src="/cohost.png" alt="" />
+            </a>
             <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank">
                 <NuxtImg src="/touhou.gif" alt="" />
             </a>
