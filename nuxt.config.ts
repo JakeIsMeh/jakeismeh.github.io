@@ -100,6 +100,9 @@ export default defineNuxtConfig({
     size: '1em',
     // class: 'icon',
     aliases: {},
+    clientBundle: {
+      scan: true,
+    },
   },
 
   vite: {
