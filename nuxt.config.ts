@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
 
   contentAssets: {
-    debug: true,
+    // debug: true,
   },
 
   devtools: { enabled: true },
