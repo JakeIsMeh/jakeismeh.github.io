@@ -18,7 +18,10 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: {
         lang: 'en',
-      }
+      },
+      style: [
+        ":root{ color-scheme: dark light; }" // prevent white FOUC
+      ]
     }
   },
 
