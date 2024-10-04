@@ -20,7 +20,10 @@ export default defineNuxtConfig({
         lang: 'en',
       },
       style: [
-        ":root{ color-scheme: dark light; }" // prevent white FOUC
+        ':root{ color-scheme: dark light; }' // prevent white FOUC
+      ],
+      link: [
+        {rel: 'icon', href: 'data:,'}
       ]
     }
   },
@@ -107,6 +110,9 @@ export default defineNuxtConfig({
 
   vite: {
     vue: {
+      features: {
+        optionsAPI: false,
+      },
       template: {
         compilerOptions: {
           whitespace: 'condense',
