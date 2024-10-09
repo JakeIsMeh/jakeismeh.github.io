@@ -39,7 +39,7 @@ export default defineNuxtConfig({
       selectiveClient: true,
     },
     // componentIslands: true,
-    buildCache: true,
+    buildCache: !process.env.GITHUB_ACTIONS, // nuxt-content-assets caching bug
     defaults: {
       nuxtLink: {
         prefetch: true,
