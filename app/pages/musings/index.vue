@@ -1,12 +1,12 @@
 <script setup>
 import { formatDate } from '@vueuse/core';
 
-const { data, pending, error, refresh } = await useAsyncData('musings', () => {
+const { data } = await useAsyncData('musings', () => {
     let q = queryContent('musings')
         .only(['_path', 'title', 'subtitle', 'date', 'time', 'tags'])
 
         if (!import.meta.dev) {
-            q = q.where({"title": { $ne: "Test"}})
+            q = q.where({"title": { $ne: "test"}})
         }
         
         q = q.sort({
@@ -31,7 +31,7 @@ const { data, pending, error, refresh } = await useAsyncData('musings', () => {
         <template v-if="data.length > 0">
             <div v-for="article in data" class="vstack gap-1">
                 <h2>
-                    <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
+                    <NuxtLink :to="article._path" :class="{ 'devwarn': !(article.title && article.title.trim()) }">{{ (article.title && article.title.trim()) || "Untitled Post"  }}</NuxtLink>
                 </h2>
                 <span class="hstack gap-1 f-ai-bl">
                     <span v-if="article.time || article.date">

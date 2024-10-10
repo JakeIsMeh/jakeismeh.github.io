@@ -1,13 +1,11 @@
 ---
-title: "Test"
+title: "test"
 subtitle: "You should never be able to see this"
 tags: ["testing", "hello"]
 
 # time: "2024-02-24 20:17:58Z"
 date: "1999-06-10"
 ---
-
-# Testing
 
 This is a sentence.
 This is also a sentence.
