@@ -1,10 +1,18 @@
 <!-- Stolen from github.com/danielroe/roe.dev/blob/main/app/pages/blog/[article].vue -->
 
 <script setup lang="ts">
-const { path, tag = 'article' } = defineProps<{
+defineOptions({
+    inheritAttrs: false
+})
+
+const { path } = defineProps<{
     path: String
-    tag?: String
 }>()
+
+// const { path, tag = 'article' } = defineProps<{
+//     path: String
+//     tag?: String
+// }>()
 
 async function retrieve() {
     if (import.meta.dev) {
@@ -19,13 +27,14 @@ const article = await retrieve();
 </script>
 
 <template>
-    <ContentRendererMarkdown :value="article" :tag="tag"/>
+    <div>
+        <ContentRendererMarkdown :value="article!" tag="article" v-bind="$attrs" />
+    </div>
 </template>
 
 
 <style lang="scss" scoped>
 :deep() {
-
     :not(div:first-child) {
 
         h1,
@@ -39,7 +48,7 @@ const article = await retrieve();
     }
 
     .footnotes {
-//         font-size: 0.85em;
+        // font-size: 0.85em;
         border: .125rem solid;
         // border-radius: $radius;
         background-color: var(--t-bg-el1);
@@ -62,6 +71,37 @@ const article = await retrieve();
     h5,
     h6 {
         padding-bottom: $eighth-spacing-unit;
+    }
+
+    // paragraphs with only math
+    p>span.katex:only-child {
+        display: block;
+        text-align: center;
+        width: 100%
+    }
+
+    // math blocks (```math)
+    article>span.katex>span.katex-html {
+        display: block;
+        width: 100%;
+
+        &>span.base {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: $quarter-spacing-unit;
+            text-align: center;
+
+            &>span.strut {
+                display: none;
+            }
+
+            &>span.mord {
+                // display: block;
+                // text-align: center;
+                // width: 100%
+            }
+        }
     }
 }
 </style>

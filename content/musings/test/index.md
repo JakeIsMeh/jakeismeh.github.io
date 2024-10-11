@@ -113,6 +113,26 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 > L = \frac{1}{2} \rho v^2 S C_L
 > $$
 
+
+#### Case Problem 0: Vector Algebra
+$$\vert\overrightarrow{C}\vert = \sqrt{\vert{A}\vert^2 + \vert{B}\vert^2 + 2\vert{A}\vert\vert{B}\vert\cos{\varTheta}}$$
+
+$$\vert\overrightarrow{C}\vert =\sqrt{\vert{A}\vert^2 + 4\vert{A}\vert^2 + 4\vert{A}\vert^2\cos{\varTheta}}$$
+
+$$10^2 = 5\vert{A}\vert^2 + 4\vert{A}\vert^2 + 4\vert{A}\vert^2\cos{\varTheta}$$
+
+$\vert{A}\vert = 3.56$
+
+$\vert{A}\vert = 7.12$
+
+Angle between the two vectors:
+
+```math
+{\sin{30} = 2\sin\alpha}
+{0.5 = 2\sin\alpha}
+{\alpha = 14.477^\circ}
+```
+
 `inline code`
 
 | Syntax | Description |
