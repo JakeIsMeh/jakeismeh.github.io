@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { StaticMarkdownRenderer } from '#components';
 import { formatDate } from '@vueuse/core';
-const route = useRoute()
-const mdr = ref<InstanceType<typeof StaticMarkdownRenderer> | undefined>(undefined);
+const route = useRoute();
+const mdr = useTemplateRef('mdr');
 const dev = import.meta.dev;
 
 let pickArray = ['_path', 'title', 'time', 'date', 'tags', 'subtitle']
