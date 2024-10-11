@@ -39,7 +39,7 @@ const article = await retrieve();
     }
 
     .footnotes {
-        font-size: 0.85em;
+//         font-size: 0.85em;
         border: .125rem solid;
         // border-radius: $radius;
         background-color: var(--t-bg-el1);
