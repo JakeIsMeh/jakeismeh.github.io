@@ -47,6 +47,10 @@ const article = await retrieve();
         }
     }
 
+    a[aria-describedby="footnote-label"] {
+        margin-left: 0; // reset link margin
+    }
+
     .footnotes {
         // font-size: 0.85em;
         border: .125rem solid;
@@ -55,7 +59,7 @@ const article = await retrieve();
         padding: $half-spacing-unit;
 
         a[data-footnote-backref] {
-            margin-left: $sixteenth-spacing-unit;
+            margin-left: 0; // reset link margin
             font-family: initial;
         }
 
