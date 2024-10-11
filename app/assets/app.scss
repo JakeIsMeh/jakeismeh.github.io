@@ -82,6 +82,9 @@ h6 {
     font-family: $header-font-family;
 }
 
+// reset default UA css for h1
+h1 { font-size: 2em; }
+
 input,
 button,
 textarea,
