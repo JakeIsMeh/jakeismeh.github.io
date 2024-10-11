@@ -133,6 +133,38 @@ Angle between the two vectors:
 {\alpha = 14.477^\circ}
 ```
 
+```math
+\left| \begin{array}{cc} x_{11} & x_{12} \\ x_{21} & x_{22} \end{array} \right|
+```
+
+```math
+\begin{array}{ccc}
+a = 10 \\
+b = 20 \\
+b = 2a \\
+2x^2 = 2 \cdot x^2
+\end{array}
+```
+
+```math
+\begin{array}{rcr} z & = & a \\ f(x,y,z) & = & x + y + z \end{array} 
+```
+
+```math
+\left\{ \begin{array}{l}
+     2x + y = 6 \\
+     y = 7
+ \end{array} \right.
+```
+
+$$
+a = 10 \\
+b = 20 \\
+b = 2a \\
+2x^2 = 2 \cdot x^2
+$$
+
+
 `inline code`
 
 | Syntax | Description |

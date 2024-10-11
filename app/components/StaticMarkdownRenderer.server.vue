@@ -34,8 +34,8 @@ const article = await retrieve();
 
 
 <style lang="scss" scoped>
-:deep() {
-    :not(div:first-child) {
+div:deep() {
+    :not(article:first-child) {
 
         h1,
         h2,
@@ -84,29 +84,56 @@ const article = await retrieve();
         width: 100%
     }
 
-    // math blocks (```math)
-    article>span.katex>span.katex-html {
-        display: block;
-        width: 100%;
+    // .katex-display>.katex {
+    //     white-space: normal
+    // }
 
-        &>span.base {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: $quarter-spacing-unit;
-            text-align: center;
+    // /* Add space between broken lines: */
+    // .katex-display>.base {
+    //     margin: 0.25em 0
+    // }
 
-            &>span.strut {
-                display: none;
-            }
+    // /* Compensate by reducing space around display math */
+    // .katex-display {
+    //     margin: 0.5em 0;
+    //     overflow: auto hidden;
+    // }
 
-            &>span.mord {
-                // display: block;
-                // text-align: center;
-                // width: 100%
-            }
-        }
+    .katex {
+        text-align: center;
     }
+
+    // math blocks (```math)
+    // article>span.katex {
+    //     display: block;
+    //     width: 100%;
+    //     text-align: center;
+
+    //     &>span.katex-html {
+    //         display: block;
+    //         width: 100%;
+    //         text-align: center;
+
+
+    //         &>span.base {
+    //             margin: 0 auto;
+    //             display: flex;
+    //             flex-direction: column;
+    //             gap: $quarter-spacing-unit;
+    //             text-align: center;
+
+    //             &>span.strut {
+    //                 display: none;
+    //             }
+
+    //             &>span.mord {
+    //                 display: block;
+    //                 text-align: center;
+    //                 width: 100%
+    //             }
+    //         }
+    //     }
+    // }
 }
 </style>
 
