@@ -12,7 +12,7 @@ const { data: doc } = await useAsyncData('article', () => queryContent(route.pat
 if (dev) {
     onMounted(async () => {
         await nextTick();
-        watch(doc, async () => { 
+        watchEffect(async () => { 
             if (doc.value!.body!.children.length > 0) {
                 await mdr.value?.refresh()
             }
