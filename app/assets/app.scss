@@ -166,6 +166,10 @@ small {
     font-size: $small-font-size;
 }
 
+th {
+    font-weight: bold;
+}
+
 th,
 td {
     border: .125rem solid;

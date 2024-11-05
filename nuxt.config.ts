@@ -92,8 +92,9 @@ export default defineNuxtConfig({
   },
 
   fonts: {
-    priority: ['fontsource', 'bunny', 'google'],
+    priority: ['google', 'fontsource', 'bunny'],
     defaults: {
+      weights: [400, 700],
       subsets: ['latin'],
     }
   },
