@@ -3,7 +3,7 @@
         <div id="text" class="vstack">
             <p>made with 💖</p>
             <p>&copy; JakeIsMeh</p>
-            <p>site content CC-BY-4.0</p>
+            <p>text content CC-BY-4.0</p>
         </div>
         <div id="gifs">
             <a href="https://en.wikipedia.org/wiki/Cohost">
