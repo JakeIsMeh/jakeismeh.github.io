@@ -34,8 +34,8 @@ const article = await retrieve();
 
 
 <style lang="scss" scoped>
-div:deep() {
-    :not(article:first-child) {
+article:deep() {
+    :not(div:first-child) {
 
         h1,
         h2,
