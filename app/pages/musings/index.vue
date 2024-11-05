@@ -1,25 +1,16 @@
 <script setup>
 import { formatDate } from '@vueuse/core';
 
-const { data } = await useAsyncData('musings', () => {
-    let q = queryContent('musings')
+const { data } = await useAsyncData('musings', () => queryContent('musings')
         .only(['_path', 'title', 'subtitle', 'date', 'time', 'tags'])
-
-        if (!import.meta.dev) {
-            q = q.where({"title": { $ne: "test"}})
-        }
-        
-        q = q.sort({
+        .sort({
             tags: 1,
             subtitle: 1,
             title: 1,
             date: -1,
             time: -1,
-        })
-        .find()
-
-    return q;
-})
+        }).find()
+)
 
 </script>
 
