@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <h3 :id="id">
-            <slot />
-            <a :href="`#${id}`" class="h-anc" v-if="generate">
-                <Icon name="ph:hash-bold" />
-            </a>
-        </h3>
-    </div>
+    <h3 :id="id">
+        <slot />
+        <a :href="`#${id}`" class="h-anc" v-if="generate">
+            <Icon name="ph:hash-bold" />
+        </a>
+    </h3>
 </template>
 
 <script setup lang="ts">
