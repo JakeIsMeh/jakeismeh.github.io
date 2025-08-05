@@ -1,13 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-
-  extends: [
-    'node_modules/nuxt-content-assets/cache',
-  ],
 
   site: {
     // production URL
@@ -26,10 +21,6 @@ export default defineNuxtConfig({
         {rel: 'icon', href: 'data:,'}
       ]
     }
-  },
-
-  contentAssets: {
-    // debug: true,
   },
 
   devtools: { enabled: true },
