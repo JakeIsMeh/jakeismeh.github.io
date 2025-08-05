@@ -1,7 +1,7 @@
 <script setup>
 import { formatDate } from '@vueuse/core';
 
-const { data } = await useAsyncData('musings', () => queryCollection('content')
+const { data } = await useAsyncData('musings-list', () => queryCollection('content')
         .select('path', 'title', 'subtitle', 'date', 'time', 'tags')
         .where('path', 'LIKE', '/musings/%')
         .where('path', '<>', '/musings/test')

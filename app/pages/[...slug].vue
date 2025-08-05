@@ -1,9 +1,21 @@
 <script setup lang="ts">
 
-const route = useRoute();
+const router = useRouter();
+
+const key_slug = computed(() => {
+    let tmp = router.currentRoute.value.path.split('/');
+
+    tmp.shift();
+
+    // just in case there is a traling slash linked somewhere
+    if (!tmp.at(-1)) {tmp.pop()}
+
+    return tmp.join('-')
+})
+
 const { data: page } = await useAsyncData(
-    route.name,
-    () => queryCollection('content').path(route.path).first()
+    key_slug,
+    () => queryCollection('content').path(router.currentRoute.value.path).first()
 );
 
 </script>
