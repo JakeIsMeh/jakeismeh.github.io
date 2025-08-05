@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { globby } from "globby";
+import fs from 'node:fs';
+import { generatePath } from './utils/contentUrl';
+
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
@@ -32,13 +36,31 @@ export default defineNuxtConfig({
       selectiveClient: true,
     },
     // componentIslands: true,
-    buildCache: !process.env.GITHUB_ACTIONS, // nuxt-content-assets caching bug
     defaults: {
       nuxtLink: {
         prefetch: true,
         prefetchOn: { visibility: false, interaction: true },
       }
     }
+  },
+
+  hooks: {
+    async 'nitro:build:public-assets'() {
+      const cwd = process.cwd();
+      const files = await globby(['content/**/*', '!(content/**/*.md)'], { cwd: cwd! });
+
+      for (const file of files) {
+        let tmp = file.split('/');
+        tmp.shift();
+        let final_file = generatePath(tmp.join('/'));
+        tmp.pop();
+        let folder = generatePath(tmp.join('/'));
+
+        console.log(`Copying ${final_file} to output...`);
+        fs.mkdirSync('.output/public' + folder, { recursive: true });
+        fs.copyFileSync(file, '.output/public' + final_file);
+      }
+    },
   },
 
   modules: [
