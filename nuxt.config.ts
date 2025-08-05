@@ -8,6 +8,13 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
+  ogImage: {
+    fonts: [
+      'Atkinson+Hyperlegible+Next:800',
+      'Atkinson+Hyperlegible+Next:500'
+    ]
+  },
+
   site: {
     // production URL
     url: 'https://jakeismeh.github.io',
