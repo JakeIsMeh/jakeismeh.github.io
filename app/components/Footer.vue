@@ -7,15 +7,19 @@
         </div>
         <div id="gifs">
             <a href="https://en.wikipedia.org/wiki/Cohost">
-                <NuxtImg src="/cohost.png" alt="" />
+                <img src="/cohost.png" alt="" />
+                <!-- <NuxtImg src="/cohost.png" alt="" /> -->
             </a>
             <a href="https://www.youtube.com/watch?v=i41KoE0iMYU" target="_blank">
-                <NuxtImg src="/touhou.gif" alt="" />
+                <img src="/touhou.gif" alt="" />
+                <!-- <NuxtImg src="/touhou.gif" alt="" /> -->
             </a>
             <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release" target="_blank">
-                <NuxtImg src="/firefox4.gif" alt="" />
+                <img src="/firefox4.gif" alt="" />
+                <!-- <NuxtImg src="/firefox4.gif" alt="" /> -->
             </a>
-            <NuxtImg src="/i-know-her.png" alt="" />
+            <img src="/i-know-her.png" alt="" />
+            <!-- <NuxtImg src="/i-know-her.png" alt="" /> -->
         </div>
     </footer>
 </template>

@@ -1,15 +1,21 @@
+<script setup lang="ts">
+
+const route = useRoute();
+const { data: page } = await useAsyncData(
+    route.path,
+    () => queryCollection('content').path(route.path).first()
+);
+
+</script>
+
 <template>
-    <ContentQuery :path="$route.path" find="one">
-        <template #default="{ data: doc }">
-            <Title>{{ doc.title }}</Title>
-            <!-- <StaticMarkdownRenderer :value="doc" /> -->
-            <StaticMarkdownRenderer :path="doc._path" />
+    <template v-if="page">
+        <Title>{{ page.title }}</Title>
+        <template v-if="!!page.body">
+            <StaticMarkdownRenderer :path="page.path" />
         </template>
-        <template #empty>
-            <h1>Document is empty</h1>
-        </template>
-        <template #not-found>
-            <NotFound />
-        </template>
-    </ContentQuery>
+    </template>
+    <template v-else>
+        <NotFound />
+    </template>
 </template>

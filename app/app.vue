@@ -1,6 +1,6 @@
 <script setup>
 import "assets/app.scss"
-
+defineOgImageComponent('template')
 </script>
 
 <template>

@@ -8,6 +8,8 @@ draft: true
 date: "1999-06-10"
 ---
 
+# Placeholder Title
+
 This is a sentence.
 This is also a sentence.
 This is another sentence that drags on for a bit longer but not too long.
@@ -90,7 +92,7 @@ Not a culprit to be seen
 A stack trace of desperation
 And it looks like it’s on me
 
-- Asahi Lina
+- Asahi Lina & Cyan Nyan
 ```
 
 ```cpp
@@ -158,6 +160,9 @@ b = 2a \\
  \end{array} \right.
 ```
 
+**The Cauchy-Schwarz Inequality**\
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
 $$
 a = 10 \\
 b = 20 \\
@@ -221,14 +226,14 @@ Here's a sentence with a footnote. [^1]
 
 :heart: :sob: :scream:
 
-![img](./media/img.png)
+![img](media/img.png)
 
-:video{src="./media/bwaaa.mp4" controls="true"}
-<!-- :img{src="./media/img.png"} -->
+:video{src="media/bwaaa.mp4" controls="true"}
+<!-- :img{src="media/img.png"} -->
 
 ## SVG
 
-![svg](./media/dino.svg)
+![svg](media/dino.svg)
 
 ### Inline SVG
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 414.46" width="200">

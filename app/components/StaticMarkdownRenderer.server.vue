@@ -6,20 +6,15 @@ defineOptions({
 })
 
 const { path } = defineProps<{
-    path: String
+    path: string
 }>()
-
-// const { path, tag = 'article' } = defineProps<{
-//     path: String
-//     tag?: String
-// }>()
 
 async function retrieve() {
     if (import.meta.dev) {
-        const { data } = await useAsyncData(() => queryContent(path).only('body').findOne());
+        const { data } = await useAsyncData(path, () => queryCollection('content').path(path).select('body').first());
         return data;
     }
-    return await queryContent(path).only('body').findOne();
+    return await queryCollection('content').path(path).select('body').first();
 }
 
 const article = await retrieve();
@@ -28,7 +23,7 @@ const article = await retrieve();
 
 <template>
     <div>
-        <ContentRendererMarkdown :value="article!" tag="article" v-bind="$attrs" />
+        <ContentRenderer :value="article!" tag="article" v-bind="$attrs" />
     </div>
 </template>
 

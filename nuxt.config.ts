@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   site: {
     // production URL
     url: 'https://jakeismeh.github.io',
+    name: 'jake\'s cosmic capsule',
   },
 
   app: {
@@ -15,10 +16,10 @@ export default defineNuxtConfig({
         lang: 'en',
       },
       style: [
-        ':root{ color-scheme: dark light; }' // prevent white FOUC
+        ':root{ color-scheme: dark light; }', // prevent white FOUC
       ],
       link: [
-        {rel: 'icon', href: 'data:,'}
+        { rel: 'icon', href: 'data:,' }
       ]
     }
   },
@@ -27,6 +28,7 @@ export default defineNuxtConfig({
 
   experimental: {
     componentIslands: {
+      // selectiveClient: 'deep',
       selectiveClient: true,
     },
     // componentIslands: true,
@@ -43,42 +45,55 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     '@nuxt/image',
     '@nuxt/icon',
-    "@nuxtjs/critters",
-    // "nuxt-og-image",
-    "nuxt-content-assets",
+    '@nuxtjs/critters',
     '@nuxt/content',
+    'nuxt-og-image',
   ],
 
   mdc: {
     headings: {
+      
+    },
+  },
+
+  content: {
+    experimental: { sqliteConnector: 'native' },
+    build: {
+      transformers: [
+        '~~/transformers/normalize_relative_paths'
+      ],
+      markdown: {
+        remarkPlugins: {
+          'remark-math': {},
+          'remark-rehype': {
+            clobberPrefix: 'fn',
+          },
+        },
+        rehypePlugins: {
+          'rehype-katex': {},
+        },
+
+        highlight: {
+          theme: {
+            default: 'light-plus',
+            d: 'monokai',
+          },
+          langs: [
+            'js', 'jsx', 'json', 'ts', 'tsx', 'vue', 'css', 'html', 'vue', 'bash', 'md', 'mdc', 'yaml',
+            'c', 'cpp', 'csharp', 'swift',
+          ],
+        },
+      },
+    },
+    renderer: {
       anchorLinks: {
-        h1: true,
+        h1: false,
         h2: true,
         h3: true,
         h4: false,
         h5: false,
         h6: false
-      }
-    },
-  },
-
-  content: {
-    markdown: {
-      remarkPlugins: ['remark-math'],
-      rehypePlugins: ['rehype-katex'],
-      rehypeOptions: {
-        clobberPrefix: '',
       },
-    },
-    highlight: {
-      theme: {
-        default: 'light-plus',
-        d: 'monokai',
-      },
-      langs: [
-        'js', 'jsx', 'json', 'ts', 'tsx', 'vue', 'css', 'html', 'vue', 'bash', 'md', 'mdc', 'yaml',
-        'c', 'cpp', 'csharp', 'swift',
-      ],
     },
   },
 
@@ -95,6 +110,7 @@ export default defineNuxtConfig({
     size: '1em',
     // class: 'icon',
     aliases: {},
+    serverBundle: 'local',
     clientBundle: {
       scan: true,
     },
@@ -116,12 +132,11 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           silenceDeprecations: ['mixed-decls'],
-          api: 'modern-compiler',
           additionalData: '@use "@/assets/variables.scss" as *;@use "@picocss/pico/scss/colors" as *;',
         },
       },
     },
   },
 
-  compatibilityDate: '2024-07-05'
+  compatibilityDate: '2025-08-05'
 })

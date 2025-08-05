@@ -10,8 +10,8 @@
         </div>
         <pre :class="[$props.class, { 'codepad': !$props.language }]" :start="meta?.start"><slot /></pre>
         <div class="codecorner hstack gap-0">
-            <span v-if="$props.language && $props.language !== 'txt'">{{ $props.language }}</span>
-            <!-- <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/> -->
+            <span v-if="$props.language">{{ $props.language === 'text' ? 'txt' : $props.language }}</span>
+            <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/>
         </div>
     </div>
 </template>
@@ -24,7 +24,7 @@ const props = defineProps({
     },
     language: {
         type: String,
-        default: null
+        default: 'null'
     },
     filename: {
         type: String,
@@ -90,7 +90,9 @@ const lang_str = JSON.stringify(`     ${props.language}`);
                 flex-direction: row;
             }
         }
-
+        &:not(.shiki) {
+            padding: $quarter-spacing-unit $quarter-spacing-unit + $eighth-spacing-unit;
+        }
     }
 
     .copysnippet {
