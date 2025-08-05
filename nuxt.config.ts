@@ -70,6 +70,7 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxt/content',
     'nuxt-og-image',
+    'nuxt-github-pages',
   ],
 
   mdc: {
