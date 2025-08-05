@@ -7,7 +7,8 @@ const dev = import.meta.dev;
 
 let pickArray = ['path', 'title', 'time', 'date', 'tags', 'subtitle']
 if (dev) { pickArray.push('body') }
-const { data: doc, refresh } = await useAsyncData(route.fullPath, () => queryCollection('content').path(route.fullPath).select(...pickArray).first())
+
+const { data: doc, refresh } = await useAsyncData(route.name, () => queryCollection('content').path(route.fullPath).select(...pickArray).first())
 
 if (!doc.value) {
     throw createError({
