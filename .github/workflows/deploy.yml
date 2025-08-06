@@ -29,6 +29,8 @@ jobs:
 
       - name: Prerender pages
         run: pnpm run build --preset github_pages
+        env:
+          NODE_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

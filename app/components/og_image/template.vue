@@ -9,10 +9,6 @@ const props = withDefaults(defineProps<{
   title: 'jake\'s cosmic capsule',
 })
 
-// const title = computed(() => {
-//   return props.title || 'jake\'s cosmic capsule'
-// })
-
 </script>
 
 <template>

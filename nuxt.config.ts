@@ -74,10 +74,10 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     '@nuxt/image',
     '@nuxt/icon',
-    '@nuxtjs/critters',
     '@nuxt/content',
     'nuxt-og-image',
-    'nuxt-github-pages',
+    // 'nuxt-github-pages',
+    '@nuxtjs/critters',
   ],
 
   mdc: {

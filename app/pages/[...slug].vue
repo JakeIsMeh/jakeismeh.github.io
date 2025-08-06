@@ -15,7 +15,7 @@ const key_slug = computed(() => {
 
 const { data: page } = await useAsyncData(
     key_slug,
-    () => queryCollection('content').path(router.currentRoute.value.path).first()
+    () => ((import.meta.server || import.meta.dev) as true) && queryCollection('content').path(router.currentRoute.value.path).first()
 );
 
 </script>

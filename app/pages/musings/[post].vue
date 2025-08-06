@@ -1,16 +1,30 @@
 <script setup lang="ts">
 import { StaticMarkdownRenderer } from '#components';
 import { formatDate } from '@vueuse/core';
-const route = useRoute();
+
 const mdr = useTemplateRef('mdr');
 const dev = import.meta.dev;
+
+const router = useRouter();
+
+const key_slug = computed(() => {
+    let tmp = router.currentRoute.value.path.split('/');
+
+    tmp.shift();
+
+    // just in case there is a traling slash linked somewhere
+    if (!tmp.at(-1)) {tmp.pop()}
+
+    return tmp.join('-')
+})
 
 let pickArray = ['path', 'title', 'time', 'date', 'tags', 'subtitle']
 if (dev) { pickArray.push('body') }
 
-const { data: doc, refresh } = await useAsyncData(route.name, () => queryCollection('content').path(route.fullPath).select(...pickArray).first())
 
-if (!doc.value) {
+const { data } = await useAsyncData(key_slug, () =>  ((import.meta.server || import.meta.dev) as true) && queryCollection('content').path(router.currentRoute.value.path).select(...pickArray).first())
+
+if (!data.value) {
     throw createError({
         statusCode: 404,
         statusMessage: 'Page Not Found',
@@ -21,34 +35,32 @@ if (!doc.value) {
 if (dev) {
     onMounted(async () => {
         await nextTick();
-        watchEffect(async () => {
-            if (doc.value!.body.value.length > 0) {
-                await mdr.value?.refresh()
-            }
-        })
+        watch(data, async () => {
+            await mdr.value?.refresh()
+        }, {deep:true})
     })
 }
 </script>
 
 <template>
-    <template v-if="doc">
-        <Title>{{ (doc.title && doc.title.trim()) || "Untitled Post" }}</Title>
+    <template v-if="data">
+        <Title>{{ (data.title && data.title.trim()) || "Untitled Post" }}</Title>
         <div class="vstack gap-1">
-            <h1 :class="{ 'devwarn': !(doc.title && doc.title.trim()) }">{{ (doc.title && doc.title.trim()) ||
+            <h1 :class="{ 'devwarn': !(data.title && data.title.trim()) }">{{ (data.title && data.title.trim()) ||
                 "Untitled Post" }}</h1>
-            <p v-if="doc.time || doc.date">{{ formatDate(new Date(doc.time ?? doc.date), "DD MMM YYYY") }}</p>
+            <p v-if="data.time || data.date">{{ formatDate(new Date(data.time ?? data.date), "DD MMM YYYY") }}</p>
             <DevOnly v-else>
                 <p class="devwarn">Missing date</p>
             </DevOnly>
-            <Tags :tags="doc.tags" />
-            <p v-if="doc.subtitle"><small><i>{{ doc.subtitle }}</i></small></p>
+            <Tags :tags="data.tags" />
+            <p v-if="data.subtitle"><small><i>{{ data.subtitle }}</i></small></p>
             <DevOnly v-else>
                 <p class="devinfo">No subtitle</p>
             </DevOnly>
         </div>
         <br>
-        <template v-if="dev ? doc.body.value.length > 0 : true" >
-            <StaticMarkdownRenderer :path="doc.path!" class="vstack gap-2" ref="mdr"/>
+        <template v-if="dev ? data.body.value.length > 0 : true" >
+            <StaticMarkdownRenderer :path="data.path!" class="vstack gap-2" ref="mdr"/>
         </template>
         <template v-else>
             <h1 class="devwarn">document is empty</h1>
