@@ -73,11 +73,11 @@ article:deep() {
     }
 
     // paragraphs with only math
-    p>span.katex:only-child {
-        display: block;
-        text-align: center;
-        width: 100%
-    }
+    // p>span.katex:only-child {
+    //     display: block;
+    //     text-align: center;
+    //     width: 100%
+    // }
 
     // .katex-display>.katex {
     //     white-space: normal

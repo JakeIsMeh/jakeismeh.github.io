@@ -109,8 +109,8 @@ export default defineNuxtConfig({
             d: 'monokai',
           },
           langs: [
-            'js', 'jsx', 'json', 'ts', 'tsx', 'vue', 'css', 'html', 'vue', 'bash', 'md', 'mdc', 'yaml',
-            'c', 'cpp', 'csharp', 'swift',
+            'js', 'jsx', 'json', 'ts', 'tsx', 'vue', 'css', 'html', 'bash', 'md', 'mdc', 'yaml',
+            'c', 'cpp', 'csharp', 'swift', 'py',
           ],
         },
       },
