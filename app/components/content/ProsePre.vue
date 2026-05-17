@@ -1,9 +1,11 @@
 <template>
-    <DevOnly v-if="!$props.code || $props.code.trim().length < 1">
-        <div class="devwarn">
-            <p>Empty code block</p>
-        </div>
-    </DevOnly>
+    <template v-if="!$props.code || $props.code.trim().length < 1">
+   	    <DevOnly>
+            <div class="devwarn">
+                <p>Empty code block</p>
+            </div>
+        </DevOnly>
+    </template>
     <div class="codeblock" v-else>
         <div class="codemeta" v-if="filename">
             <span><small>{{ $props.filename }}</small></span>
@@ -11,7 +13,7 @@
         <pre :class="[$props.class, { 'codepad': !$props.language }]" :start="meta?.start"><slot /></pre>
         <div class="codecorner hstack gap-0">
             <span v-if="$props.language">{{ $props.language === 'text' ? 'txt' : $props.language }}</span>
-            <!-- <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/> -->
+            <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/> 
         </div>
     </div>
 </template>

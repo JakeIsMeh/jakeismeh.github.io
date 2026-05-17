@@ -1,17 +1,17 @@
 <script setup>
 import "assets/app.scss"
 import "assets/prose_hoisted.scss"
-defineOgImageComponent('template')
+// defineOgImage('template')
 </script>
 
 <template>
-    <NuxtRouteAnnouncer />
-    <NuxtLoadingIndicator color="var(--t-pink-bg)" />
-        <NuxtErrorBoundary>
-            <NuxtLayout>
-                <NuxtErrorBoundary>
-                    <NuxtPage />
-                </NuxtErrorBoundary>
-          </NuxtLayout>
-    </NuxtErrorBoundary>
+<NuxtRouteAnnouncer />
+<NuxtLoadingIndicator color="var(--t-pink-bg)" />
+<NuxtErrorBoundary>
+	<NuxtLayout>
+		<NuxtErrorBoundary>
+			<NuxtPage />
+		</NuxtErrorBoundary>
+	</NuxtLayout>
+</NuxtErrorBoundary>
 </template>

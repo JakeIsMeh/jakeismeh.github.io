@@ -39,8 +39,8 @@ export default defineNuxtConfig({
 
   experimental: {
     componentIslands: {
-      // selectiveClient: 'deep',
-      selectiveClient: true,
+      selectiveClient: 'deep',
+      // selectiveClient: true,
     },
     // componentIslands: true,
     defaults: {
@@ -75,14 +75,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
     '@nuxt/content',
-    'nuxt-og-image',
+    // 'nuxt-og-image',
     // 'nuxt-github-pages',
     '@nuxtjs/critters',
   ],
 
   mdc: {
     headings: {
-      
+
     },
   },
 
@@ -161,7 +161,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          silenceDeprecations: ['mixed-decls'],
+          silenceDeprecations: [],
           additionalData: '@use "@/assets/variables.scss" as *;@use "@picocss/pico/scss/colors" as *;',
         },
       },
