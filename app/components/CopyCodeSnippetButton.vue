@@ -13,7 +13,7 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-    <button @click="console.log('hi');copy($props.code ?? '')">
+    <button @click="copy($props.code ?? '')">
         <Icon :name="copied ? 'ph:check-bold' : 'ph:clipboard-bold'" />
     </button>
 </template>
