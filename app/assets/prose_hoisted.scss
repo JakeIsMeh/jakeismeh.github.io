@@ -33,6 +33,7 @@ code.inline {
     }
 
     pre {
+        display: grid;
         background: transparent;
         padding: $quarter-spacing-unit 0;
         margin: 0;
@@ -46,8 +47,7 @@ code.inline {
             line-height: 1.6;
 
             span.line {
-                display: flex;
-                flex-direction: row;
+                display: block;
             }
         }
         &:not(.shiki) {

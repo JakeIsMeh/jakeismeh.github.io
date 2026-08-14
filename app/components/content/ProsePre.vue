@@ -13,7 +13,7 @@
         <pre :class="[$props.class, { 'codepad': !$props.language }]" :start="meta?.start"><slot /></pre>
         <div class="codecorner hstack gap-0">
             <span v-if="$props.language">{{ $props.language === 'text' ? 'txt' : $props.language }}</span>
-            <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/> 
+            <CopyCodeSnippetButton nuxt-client :code="$props.code" class="copysnippet"/>
         </div>
     </div>
 </template>
@@ -49,7 +49,7 @@ const props = defineProps({
 const meta = computed(() => {
     return props.meta ? JSON.parse(props.meta) : undefined;
 })
-const lang_str = JSON.stringify(`     ${props.language}`);
+const lang_len = computed(() => (props.language === 'text' ? 'txt'.length : (props.language?.length || 0)));
 </script>
 
 <style lang="scss">
@@ -75,6 +75,7 @@ const lang_str = JSON.stringify(`     ${props.language}`);
     }
 
     pre {
+        display: grid;
         background: transparent;
         padding: $quarter-spacing-unit 0;
         margin: 0;
@@ -88,8 +89,7 @@ const lang_str = JSON.stringify(`     ${props.language}`);
             line-height: 1.6;
 
             span.line {
-                display: flex;
-                flex-direction: row;
+                display: block;
             }
         }
         &:not(.shiki) {
@@ -127,9 +127,7 @@ const lang_str = JSON.stringify(`     ${props.language}`);
 </style>
 
 <style lang="scss" scoped>
-.codeblock>:deep(pre code span.line::after) {
-    content: v-bind(lang_str);
-    display: inline-block;
-    visibility: hidden;
+.codeblock>:deep(pre code span.line) {
+    padding-right: calc(2.5rem + v-bind(lang_len) * 1ch);
 }
 </style>
