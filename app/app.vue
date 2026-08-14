@@ -1,6 +1,6 @@
 <script setup>
 import "assets/app.scss"
-import "assets/prose_hoisted.scss"
+// import "assets/prose_hoisted.scss"
 // defineOgImage('template')
 </script>
 
