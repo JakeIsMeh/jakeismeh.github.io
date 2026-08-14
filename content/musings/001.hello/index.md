@@ -18,5 +18,3 @@ int main() {
   fmt::print("we get code blocks with highlighting!");
 }
 ```
-
-![img](media/img.png)
