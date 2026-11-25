@@ -162,7 +162,8 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           silenceDeprecations: [],
-          additionalData: '@use "@/assets/variables.scss" as *;@use "@picocss/pico/scss/colors" as *;',
+          // additionalData: '@use "@/assets/variables.scss" as *;@use "@picocss/pico/scss/colors" as *;',
+          additionalData: '@use "@/assets/variables.scss" as *;',
         },
       },
     },

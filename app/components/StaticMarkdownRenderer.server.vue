@@ -132,6 +132,6 @@ article:deep() {
 }
 </style>
 
-<style lang="scss">
+<style>
 @import 'katex/dist/katex.css';
 </style>

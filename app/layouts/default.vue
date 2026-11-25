@@ -12,7 +12,7 @@
     <Footer />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 main.main {
     flex: 1; // short for `1 1 0`
     display: block;
